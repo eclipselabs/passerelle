@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.isencia.passerelle</groupId>
+		<artifactId>parent</artifactId>
+		<version>8.10.0-SNAPSHOT</version>
+		<relativePath>../com.isencia.passerelle.parent</relativePath>
+	</parent>
+
+	<artifactId>passerelle-core</artifactId>
+	<packaging>pom</packaging>
+	<name>Passerelle :: Core :: parent</name>
+
+	<modules>
+		<module>com.isencia.passerelle.actor.conf</module>
+		<module>com.isencia.passerelle.actor.help</module>
+		<module>com.isencia.passerelle.actor.test</module>
+		<module>com.isencia.passerelle.actor</module>
+		<module>com.isencia.passerelle.commons.test</module>
+		<module>com.isencia.passerelle.commons.ume.test</module>
+		<module>com.isencia.passerelle.commons.ume</module>
+		<module>com.isencia.passerelle.commons</module>
+		<module>com.isencia.passerelle.core.feature</module>
+		<module>com.isencia.passerelle.defaulttypeconverterprovider</module>
+		<module>com.isencia.passerelle.domain.et.test</module>
+		<module>com.isencia.passerelle.domain.et</module>
+		<module>com.isencia.passerelle.editor.common</module>
+		<module>com.isencia.passerelle.engine.test</module>
+		<module>com.isencia.passerelle.engine</module>
+		<module>com.isencia.passerelle.process.actor</module>
+		<module>com.isencia.passerelle.process.common</module>
+		<module>com.isencia.passerelle.process.conf</module>
+		<module>com.isencia.passerelle.process.model.impl</module>
+		<module>com.isencia.passerelle.process.model.impl.test</module>
+		<module>com.isencia.passerelle.process.model.mockimpl</module>
+		<module>com.isencia.passerelle.process.model</module>
+		<module>com.isencia.passerelle.process.scheduler</module>
+		<module>com.isencia.passerelle.process.service</module>
+		<module>com.isencia.passerelle.process.service.impl</module>
+		<module>com.isencia.passerelle.project.repository.api</module>
+		<module>com.isencia.passerelle.project.repository.impl.filesystem</module>
+		<module>com.isencia.passerelle.runtime</module>
+		<module>com.isencia.passerelle.runtime.process.impl</module>
+		<module>com.isencia.passerelle.runtime.ws.rest</module>
+		<module>com.isencia.passerelle.runtime.ws.rest.client</module>
+		<module>com.isencia.passerelle.runtime.ws.rest.server</module>
+		<module>com.isencia.passerelle.testsupport</module>
+	</modules>
+
+</project>

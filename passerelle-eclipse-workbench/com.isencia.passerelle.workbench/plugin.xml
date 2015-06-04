@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="application"
+         name="Passerelle Workbench Application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.isencia.passerelle.workbench.Application">
+         </run>
+      </application>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views">
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+         application="com.isencia.passerelle.workbench.application"
+               name="PasserelleWorkbench">
+         <property
+               name="windowImages"
+               value="icons/ide.gif,icons/ide32.gif,icons/ide48.gif">
+         </property>
+         <property
+               name="aboutText"
+               value="Passerelle 8 by iSencia Belgium">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/about.gif">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="F5F5F5">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="0,260,400,10">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,0,400,20">
+         </property>
+         <property
+               name="appName"
+               value="PasserelleWorkbench">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+</plugin>

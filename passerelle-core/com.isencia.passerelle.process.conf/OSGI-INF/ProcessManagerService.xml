@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="init" deactivate="destroy" immediate="true" name="ProcessManagerService">
+   <implementation class="com.isencia.passerelle.process.service.impl.ProcessManagerServiceImpl"/>
+   <service>
+      <provide interface="com.isencia.passerelle.process.service.ProcessManagerService"/>
+   </service>
+   <reference bind="setFactory" cardinality="1..1" interface="com.isencia.passerelle.process.model.factory.ProcessFactory" name="factory" policy="static"/>
+   <reference bind="setPersister" cardinality="1..1" interface="com.isencia.passerelle.process.model.persist.ProcessPersister" name="persister" policy="static"/>
+</scr:component>

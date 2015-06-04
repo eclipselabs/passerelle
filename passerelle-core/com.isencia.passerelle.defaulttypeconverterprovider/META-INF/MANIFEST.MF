@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Default TypeConverterProvider Plug-in
+Bundle-SymbolicName: com.isencia.passerelle.defaulttypeconverterprovider
+Bundle-Version: 8.10.0.qualifier
+Bundle-Activator: com.isencia.passerelle.defaulttypeconverterprovider.activator.Activator
+Bundle-Vendor: ISENCIA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.isencia.passerelle.message.type;version="8.7.0",
+ com.isencia.passerelle.ext;version="8.7.0",
+ org.osgi.framework;version="1.3.0"

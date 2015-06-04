@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle Commons UME Test
+Bundle-SymbolicName: com.isencia.passerelle.commons.ume.test
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: ISENCIA
+Fragment-Host: com.isencia.passerelle.commons.ume;bundle-version="7.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit;bundle-version="3.8.2"
+Bundle-ClassPath: lib/org.mockftpserver_2.4.0.jar,
+ .

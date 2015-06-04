@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Microstar Plug-in
+Bundle-SymbolicName: com.microstar
+Bundle-Version: 1.2.0
+Bundle-Vendor: isencia
+Eclipse-LazyStart: false
+Import-Package: org.osgi.framework;version="1.3.0"
+Export-Package: com.microstar.xml;version="1.2.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

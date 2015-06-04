@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE class PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<class name="helloSubModel" extends="com.isencia.passerelle.model.Flow">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="7.0.1">
+    </property>
+    <port name="input" class="ptolemy.actor.TypedIOPort">
+    </port>
+    <port name="output" class="ptolemy.actor.TypedIOPort">
+    </port>
+    <entity name="Constant" class="com.isencia.passerelle.testsupport.actor.Const">
+        <property name="value" class="ptolemy.data.expr.StringParameter" value="hello">
+        </property>
+    </entity>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <relation name="relation_2" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <link port="input" relation="relation"/>
+    <link port="output" relation="relation_2"/>
+    <link port="Constant.output" relation="relation_2"/>
+    <link port="Constant.trigger" relation="relation"/>
+</class>

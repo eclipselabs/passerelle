@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="com.isencia.passerelle.engine.actors" name="Passerelle Actors" schema="schema/com.isencia.passerelle.engine.actors.exsd"/>
+   <extension-point id="com.isencia.passerelle.engine.actorGroups" name="Passerelle Actor Groups" schema="schema/com.isencia.passerelle.engine.actorGroups.exsd"/>
+
+</plugin>

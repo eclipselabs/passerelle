@@ -1,0 +1,103 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="test" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="4.0.1">
+    </property>
+    <property name="director" class="com.isencia.passerelle.domain.cap.Director">
+        <property name="Properties File" class="ptolemy.data.expr.FileParameter">
+        </property>
+        <property name="Mock Mode" class="ptolemy.data.expr.Parameter" value="false">
+            <property name="style" class="ptolemy.actor.gui.style.CheckBoxStyle">
+            </property>
+        </property>
+        <property name="Expert Modeler" class="ptolemy.data.expr.Parameter" value="false">
+            <property name="style" class="ptolemy.actor.gui.style.CheckBoxStyle">
+            </property>
+        </property>
+    </property>
+    <entity name="constant1" class="com.isencia.passerelle.actor.general.Const">
+        <property name="_icon" class="com.isencia.passerelle.actor.gui.EditorIcon">
+            <property name="_tableauFactory" class="ptolemy.vergil.icon.EditIconTableau$Factory">
+            </property>
+        </property>
+        <property name="value" class="ptolemy.data.expr.StringParameter">
+        </property>
+        <port name="requestFinish" class="com.isencia.passerelle.core.ControlPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="error" class="com.isencia.passerelle.core.ErrorPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="error" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="hasFired" class="com.isencia.passerelle.core.ControlPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="hasFinished" class="com.isencia.passerelle.core.ControlPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="output" class="com.isencia.passerelle.core.Port">
+            <property name="output"/>
+            <property name="multiport"/>
+        </port>
+        <port name="trigger" class="com.isencia.passerelle.core.Port">
+            <property name="input"/>
+            <property name="multiport"/>
+        </port>
+    </entity>
+    <entity name="console1" class="com.isencia.passerelle.actor.general.Console">
+        <property name="_icon" class="com.isencia.passerelle.actor.gui.EditorIcon">
+            <property name="_tableauFactory" class="ptolemy.vergil.icon.EditIconTableau$Factory">
+            </property>
+        </property>
+        <property name="PassThrough" class="ptolemy.data.expr.Parameter" value="false">
+            <property name="style" class="ptolemy.actor.gui.style.CheckBoxStyle">
+            </property>
+        </property>
+        <property name="Chop output at #chars" class="ptolemy.data.expr.Parameter" value="80">
+        </property>
+        <port name="requestFinish" class="com.isencia.passerelle.core.ControlPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="error" class="com.isencia.passerelle.core.ErrorPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="error" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="hasFired" class="com.isencia.passerelle.core.ControlPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="hasFinished" class="com.isencia.passerelle.core.ControlPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="input" class="com.isencia.passerelle.core.Port">
+            <property name="input"/>
+            <property name="multiport"/>
+        </port>
+    </entity>
+    <relation name="_R" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <link port="constant1.output" relation="_R"/>
+    <link port="console1.input" relation="_R"/>
+</entity>

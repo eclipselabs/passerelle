@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="com.isencia.passerelle.engine.actors" name="com.isencia.passerelle.engine.actors" schema="schema/com.isencia.passerelle.engine.actors.exsd"/>
+   <extension-point id="com.isencia.passerelle.engine.actorGroups" name="com.isencia.passerelle.engine.actorGroups" schema="schema/com.isencia.passerelle.engine.actorGroups.exsd"/>
+   <extension-point id="com.isencia.passerelle.engine.model.listener" name="com.isencia.passerelle.engine.model.listener" schema="schema/com.isencia.passerelle.engine.model.listener.exsd"/>
+    <extension
+          id="com.isencia.passerelle.workbench.model.launch"
+          name="ModelLauncher"
+          point="org.eclipse.core.runtime.applications">
+ 	  <application
+          cardinality="1"
+          icon="icons/model.gif"
+          thread="main"
+          visible="true">
+ 		<run class="com.isencia.passerelle.workbench.model.launch.ModelRunner">
+ 			<parameter name="optimize" value="true" />
+ 		</run>
+ 	</application>
+ </extension>
+    <extension
+          point="org.eclipse.core.runtime.preferences">
+       <initializer
+             class="com.isencia.passerelle.workbench.model.activator.PreferenceInitializer">
+       </initializer>
+    </extension>
+ 
+</plugin>

@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle Repository Api Plug-in
+Bundle-SymbolicName: com.isencia.passerelle.project.repository.api
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: ISENCIA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.isencia.passerelle.core;version="8.7.0",
+ com.isencia.passerelle.model;version="8.7.0",
+ org.osgi.framework;version="1.3.0",
+ ptolemy.actor;version="7.0.1"
+Export-Package: com.isencia.passerelle.project.repository.api;version="8.9.0"

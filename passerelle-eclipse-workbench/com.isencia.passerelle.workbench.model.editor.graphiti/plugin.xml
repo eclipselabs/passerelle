@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="Workflows"
+            id="com.isencia.passerelle.workbench.model.ui">
+      </category>
+      <wizard
+            name="Workflow model on Graphiti"
+            icon="icons/model.gif"
+            category="com.isencia.passerelle.workbench.model.ui"
+            class="com.isencia.passerelle.workbench.model.editor.graphiti.wizard.CreateDiagramWizard"
+            id="com.isencia.passerelle.workbench.model.editor.graphiti.wizard.CreateDiagramWizard">
+	     <selection
+	           class="org.eclipse.core.resources.IContainer">
+	     </selection>
+      </wizard>
+   </extension>
+
+<extension point="org.eclipse.graphiti.ui.diagramTypes">
+    <diagramType
+      description="This is the diagram type for Passerelle models"
+      id="com.isencia.passerelle.workbench.model.editor.graphiti.PasserelleDiagramType"
+      name="Passerelle Diagram Type"
+      type="Passerelle model">
+    </diagramType>
+  </extension>
+
+  <extension point="org.eclipse.graphiti.ui.diagramTypeProviders">
+    <diagramTypeProvider
+      class="com.isencia.passerelle.workbench.model.editor.graphiti.PasserelleDiagramTypeProvider"
+      description="This is the Passerelle model editor type provider"
+      id="com.isencia.passerelle.workbench.model.editor.graphiti.PasserelleDiagramTypeProvider"
+      name="Passerelle model editor">
+      <diagramType id="com.isencia.passerelle.workbench.model.editor.graphiti.PasserelleDiagramType">
+      </diagramType>
+      <imageProvider
+            id="com.isencia.passerelle.workbench.model.editor.graphiti.ImageProvider">
+      </imageProvider>
+    </diagramTypeProvider>
+  </extension>
+  
+   <extension point="org.eclipse.ui.elementFactories" id=".PasserelleEditorInputFactory" name="Passerelle editor input factory">
+      <factory class="com.isencia.passerelle.workbench.model.editor.graphiti.input.PasserelleEditorInputFactory" id="com.isencia.passerelle.workbench.model.editor.graphiti.input.PasserelleEditorInputFactory">
+      </factory>
+   </extension>
+  
+  <extension point="org.eclipse.graphiti.ui.imageProviders">
+    <imageProvider
+      class="com.isencia.passerelle.workbench.model.editor.graphiti.ImageProvider"
+      id="com.isencia.passerelle.workbench.model.editor.graphiti.ImageProvider">
+    </imageProvider>
+  </extension>
+  
+  <extension point="org.eclipse.ui.editors">
+ 	  <editor
+          class="com.isencia.passerelle.workbench.model.editor.graphiti.PasserelleDiagramEditor"
+          contributorClass="com.isencia.passerelle.workbench.model.editor.graphiti.PasserelleDiagramEditorActionBarContributor"
+          default="true"
+          extensions="pdml"
+          icon="icons/model.gif"
+          id="com.isencia.passerelle.workbench.model.editor.graphiti.PasserelleDiagramEditor"
+          matchingStrategy="org.eclipse.graphiti.ui.editor.DiagramEditorMatchingStrategy"
+          name="Passerelle model editor">
+       <contentTypeBinding
+             contentTypeId="org.eclipse.graphiti.content.diagram">
+       </contentTypeBinding>
+      </editor>
+   </extension>
+  
+</plugin>

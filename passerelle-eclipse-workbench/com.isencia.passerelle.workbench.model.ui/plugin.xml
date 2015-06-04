@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+<extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.isencia.passerelle.workbench.model.ui.PasserellePerspective"
+            icon="icons/ide.gif"
+            id="com.isencia.passerelle.workbench.model.ui.perspective"
+            name="Passerelle">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="Workflows"
+            id="com.isencia.passerelle.workbench.model.ui">
+      </category>
+      <wizard
+            name="Workflow Model"
+            icon="icons/model.gif"
+            category="com.isencia.passerelle.workbench.model.ui"
+            class="com.isencia.passerelle.workbench.model.ui.wizards.PasserelleNewModelWizard"
+            id="com.isencia.passerelle.workbench.model.ui.wizards.PasserelleNewModelWizard">
+      </wizard>
+   </extension>
+   
+   <!--
+   <extension point="org.eclipse.ui.perspectiveExtensions">
+	<perspectiveExtension targetID="com.isencia.passerelle.workbench.model.ui.perspective">
+		<actionSet id="org.eclipse.debug.ui.launchActionSet"/>
+	</perspectiveExtension>	
+   </extension>
+    -->
+ 
+</plugin>

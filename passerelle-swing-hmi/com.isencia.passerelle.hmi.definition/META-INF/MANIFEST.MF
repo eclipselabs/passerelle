@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ModelBundle & field settings classes
+Bundle-SymbolicName: com.isencia.passerelle.hmi.definition
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: iSencia
+Log4J-ConfigFile: log4j.properties
+Export-Package: com.isencia.passerelle.hmi.definition;version="8.5.0"
+Bundle-ClassPath: lib/xpp3_min-1.1.3.4.O.jar,
+ lib/xstream-1.2.2.jar,
+ .
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

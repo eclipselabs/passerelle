@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ptolemy.feature_7.0.1.jar" id="ptolemy.feature" version="7.0.1">
+      <category name="passerelle_category"/>
+   </feature>
+   <feature url="features/com.isencia.passerelle.workbench.feature_8.10.0.qualifier.jar" id="com.isencia.passerelle.workbench.feature" version="8.10.0.qualifier">
+      <category name="passerelle_category"/>
+   </feature>
+   <feature url="features/com.isencia.passerelle.core.feature_8.10.0.qualifier.jar" id="com.isencia.passerelle.core.feature" version="8.10.0.qualifier">
+      <category name="passerelle_category"/>
+   </feature>
+   <category-def name="passerelle_category" label="Passerelle"/>
+</site>

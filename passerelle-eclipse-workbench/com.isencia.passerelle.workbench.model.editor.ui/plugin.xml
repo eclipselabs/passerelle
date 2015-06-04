@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="com.isencia.passerelle.workbench.model.editor.ui.dropFactory" name="Drop Class Factory" schema="schema/com.isencia.passerelle.workbench.model.editor.ui.dropFactory.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.editors">
+     <editor
+            class="com.isencia.passerelle.workbench.model.editor.ui.editor.PasserelleModelMultiPageEditor"
+            contributorClass="com.isencia.passerelle.workbench.model.editor.ui.editor.PasserelleActionBarContributor"
+            default="false"
+            extensions="moml"
+            icon="icons/model.gif"
+            id="com.isencia.passerelle.workbench.model.editor.ui.editors.modelEditor"
+            name="Passerelle Model">
+         <contentTypeBinding
+               contentTypeId="com.isencia.passerelle.workbench.model.editor.ui.moml">
+         </contentTypeBinding>
+      </editor>
+      <editor
+            class="com.isencia.passerelle.workbench.model.editor.ui.editor.WizardModelEditor"
+            default="false"
+            extensions="moml"
+            icon="icons/run_workflow.gif"
+            id="com.isencia.passerelle.workbench.model.editor.ui.editor.WizardModelEditor"
+            name="Workflow Runner">
+      </editor>
+      <editor
+            class="com.isencia.passerelle.workbench.model.editor.ui.editor.WizardWorkflowEditor"
+            contributorClass="com.isencia.passerelle.workbench.model.editor.ui.editor.PasserelleActionBarContributor"
+            default="true"
+            extensions="moml"
+            icon="icons/model.gif"
+            id="com.isencia.passerelle.workbench.model.editor.ui.editors.wizardEditor"
+            name="Passerelle Wizard">
+         <contentTypeBinding
+               contentTypeId="com.isencia.passerelle.workbench.model.editor.ui.moml">
+         </contentTypeBinding>
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+         <propertyContributor 
+         	contributorId="com.isencia.passerelle.workbench.model.editor.ui.editors.modelEditor"
+         	labelProvider="com.isencia.passerelle.workbench.model.editor.ui.properties.ActorLabelProvider">
+         	<propertyCategory category="actor" />
+         </propertyContributor>
+         <propertyContributor 
+            contributorId="com.isencia.passerelle.workbench.model.editor.ui.editors.wizardEditor"
+            labelProvider="com.isencia.passerelle.workbench.model.editor.ui.properties.ActorLabelProvider">
+            <propertyCategory category="actor" />
+         </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+         <propertyTabs contributorId="com.isencia.passerelle.workbench.model.editor.ui.editors.modelEditor">
+            <propertyTab
+                  category="actor"
+                  id="com.isencia.passerelle.workbench.model.editor.ui.properties.tab.general"
+                  label="General">
+            </propertyTab>
+         	<propertyTab
+                afterTab="com.isencia.passerelle.workbench.model.editor.ui.properties.tab.general"
+                category="actor"
+                id="com.isencia.passerelle.workbench.model.editor.ui.properties.tab.parameters"
+                label="Properties">
+         	</propertyTab>	
+         </propertyTabs>
+         <propertyTabs contributorId="com.isencia.passerelle.workbench.model.editor.ui.editors.wizardEditor">
+            <propertyTab
+                  category="actor"
+                  id="com.isencia.passerelle.workbench.model.editor.ui.properties.tab.general"
+                  label="General">
+            </propertyTab>
+            <propertyTab
+                afterTab="com.isencia.passerelle.workbench.model.editor.ui.properties.tab.general"
+                category="actor"
+                id="com.isencia.passerelle.workbench.model.editor.ui.properties.tab.parameters"
+                label="Properties">
+            </propertyTab>  
+        </propertyTabs>        
+   </extension>
+   
+    <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.isencia.passerelle.workbench.model.editor.ui.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         id="com.isencia.passerelle.workbench.model.editor.ui.PasserelleCategory"
+         name="Workflow Preferences"
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.dawnsci.preferences.root"
+            class="com.isencia.passerelle.workbench.model.editor.ui.PasserellePreferencePage"
+            id="com.isencia.passerelle.workbench.model.editor.ui.PasserellePreferences"
+            name="Workflow Preferences">
+      </page>
+   </extension>
+   
+
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+   
+        <content-type id="com.isencia.passerelle.workbench.model.editor.ui.moml" name="MOML"    
+                      base-type="org.eclipse.core.runtime.xml"
+                      priority="low"
+                      file-extensions="moml">           
+            <property name="org.eclipse.core.runtime.charset" default="UTF-8"/>
+            <describer class="org.eclipse.core.runtime.content.XMLContentDescriber"/>
+        </content-type>
+   
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+     <view
+           category="com.isencia.passerelle.workbench.model.editor.ui.workflow.category"
+           class="com.isencia.passerelle.workbench.model.editor.ui.views.execTrace.ExecutionTracesView"
+           icon="icons/attributes.gif"
+           id="com.isencia.passerelle.workbench.model.editor.ui.views.execTrace.ExecutionTracesView"
+           name="Execution traces">
+      </view>
+      
+         <view
+            icon="icons/tree.gif"
+            class="com.isencia.passerelle.workbench.model.editor.ui.views.ActorTreeView"
+            category="com.isencia.passerelle.workbench.model.editor.ui.workflow.category"
+            name="Palette"
+            id="com.isencia.passerelle.workbench.model.editor.ui.views.ActorTreeView"/>  
+      <view
+            category="com.isencia.passerelle.workbench.model.editor.ui.workflow.category"
+            class="com.isencia.passerelle.workbench.model.editor.ui.views.ActorAttributesView"
+            icon="icons/attributes.gif"
+            id="com.isencia.passerelle.workbench.model.editor.ui.views.ActorAttributesView"
+            name="Actor Attributes">
+      </view>
+       <category
+            name="Data Analysis - Workflows"
+            id="com.isencia.passerelle.workbench.model.editor.ui.workflow.category"/>      
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="com.isencia.passerelle.workbench.model.editor.ui.views.ActorAttributesViewContribution"
+            targetID="com.isencia.passerelle.workbench.model.editor.ui.views.ActorAttributesView">
+         <action
+               class="com.isencia.passerelle.workbench.model.editor.ui.editor.actions.DeleteAttributeHandler"
+               icon="icons/delete_attribute.gif"
+               id="com.isencia.passerelle.workbench.model.editor.ui.deleteActorAttribute"
+               label="Delete Attribute"
+               state="true"
+               style="push"
+               toolbarPath="additions"
+               tooltip="Delete the selected attribute">
+         </action>
+
+      </viewContribution>
+   </extension>
+
+</plugin>

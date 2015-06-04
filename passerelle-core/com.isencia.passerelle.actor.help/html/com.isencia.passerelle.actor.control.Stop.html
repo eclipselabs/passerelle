@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Stop</title>
+</head>
+
+<body>
+<BODY LANG="en-US" DIR="LTR">
+<H2>Stop</H2>
+<H4>com.isencia.passerelle.actor.control.Stop</H4>
+<ul>
+    <li>Pt.AcceptedRating : Green (neuendor)</li>
+    <li>Pt.ProposedRating : Green (eal)</li>
+    <li>since : Ptolemy II 2.1</li>
+    <li>version : $Id: Stop.java,v 1.1 2006/04/06 21:08:00 erwin Exp $</li>
+</ul>
+<p>
+SLIGHT VARIATION ON THE PTOLEMY STOP ACTOR, FOR PASSERELLE: STOPS MODEL
+ EXECUTION ON RECEIVING ANY KIND OF MESSAGE, NOT JUST TRUE TOKENS... An actor
+ that stops execution of a model when it receives a true token on any input
+ channel. This is accomplished by calling finish() on the manager, which
+ requests that the current iteration be completed and then the model execution
+ be halted. If the input is not connected to anything, then this actor
+ requests a stop whenever it fires.
+ <p>
+ When exactly this stops the execution depends on the domain. For example, in
+ DE, if an event with time stamp <i>T</i> and value <i>true</i> arrives at
+ this actor, then the current iteration will be concluded, and then the model
+ will halt. Concluding the current iteration means processing all events in
+ the event queue with time stamp <i>T</i>. Thus, it is possible for actors to
+ be invoked after this one is invoked with a <i>true</i> input.
+ <p>
+ In SDF, if this actor receives <i>true</i>, then the current iteration is
+ concluded and then execution is stopped. Similarly in SR.
+ <p>
+ In PN, where each actor has its own thread, there is no well-defined notion
+ of an iteration. The finish() method of the manager calls stopFire() on all
+ actors, which for threaded actors results in halting them upon their next
+ attempt to read an input or write an output. When all actor threads have
+ stopped, the iteration concludes and the model halts. <b>NOTE</b>: <i>This is
+ not the best way to stop a PN model!</i> This mechanism is nondeterministic
+ in the sense that there is no way to control exactly what data is produced or
+ consumed on the connections before the model stops. To stop a PN model, it is
+ better to design the model so that all actors are starved of data when the
+ model is to stop. The director will detect this starvation, and halt the
+ model. Nonetheless, if the nondeterminism is acceptable, this actor can be
+ used.
+</p>
+<br/><br/>
+<H2>Stop Attributes</H2>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Attribute</B></P>
+		</TD>
+		<TD WIDTH="69%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Usage</B></P>
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

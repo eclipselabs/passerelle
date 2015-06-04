@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Process Model Impl Test
+Bundle-SymbolicName: com.isencia.passerelle.process.model.impl.test
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: ISENCIA
+Fragment-Host: com.isencia.passerelle.process.model.impl;bundle-version="8.7.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit;bundle-version="4.10.0",
+ org.mockito.mockito-all;bundle-version="1.9.5"

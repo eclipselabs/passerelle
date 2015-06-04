@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OSGI Starter Plug-in
+Bundle-SymbolicName: com.isencia.passerelle.workbench.starter
+Bundle-Version: 8.10.0.qualifier
+Bundle-Activator: com.isencia.passerelle.starter.Activator
+Bundle-Vendor: iSencia SL
+Import-Package: org.apache.log4j;version="1.2.0",
+ org.osgi.framework;version="1.3.0",
+ org.slf4j;version="1.5.6"
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Chronometer</title>
+</head>
+
+<body>
+<BODY LANG="en-US" DIR="LTR">
+<H2>Chronometer</H2>
+<H4>com.isencia.passerelle.actor.control.Chronometer</H4>
+<ul>
+</ul>
+<p>
+A Chronometer with 2 blocking ports: set and reset. The actor will always
+ first wait for a message on the set port. Then it will look for a message on
+ the reset port. The time interval (in ms) between the two is sent out in the
+ body of the outgoing message. If a reset message has already arrived before a
+ set message, the reset will be immediately noticed after the set, and the
+ resulting time interval will be approximately 0. If another set message
+ arrives before the reset, it means that immediately after consuming the
+ reset, in the next fire() iteration, the actor will be set again. So, the
+ Chronometer does not drop any messages and it will almost continuously be
+ blocked on one of the 2 input ports.
+</p>
+<br/><br/>
+<H2>Chronometer Attributes</H2>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Attribute</B></P>
+		</TD>
+		<TD WIDTH="69%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Usage</B></P>
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

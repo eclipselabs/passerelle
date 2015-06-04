@@ -1,0 +1,5 @@
+This product contains software derived from Ptolemy II, from the University of Berkeley.
+
+The packages com.isencia.passerelle.actor.gui and its subpackages contain
+slightly modified versions of "the original" Ptolemy Queries, Editor(Pane)Factories, Tableaus
+etc, to obtain desired UI behaviour for Passerelle.

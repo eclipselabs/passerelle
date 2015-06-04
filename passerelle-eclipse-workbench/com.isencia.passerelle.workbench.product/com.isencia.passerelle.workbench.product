@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="PasserelleWorkbench" uid="com.isencia.passerelle.workbench.product" id="com.isencia.passerelle.workbench.product" application="com.isencia.passerelle.workbench.application" version="8.10.0.qualifier" useFeatures="false" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="icons/about.gif"/>
+      <text>
+         Passerelle 8 by iSencia Belgium
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/com.isencia.passerelle.workbench/icons/ide.gif" i32="/com.isencia.passerelle.workbench/icons/ide32.gif" i48="/com.isencia.passerelle.workbench/icons/ide48.gif"/>
+
+   <splash
+      location="com.isencia.passerelle.workbench"
+      startupProgressRect="0,260,400,10"
+      startupMessageRect="7,0,400,20"
+      startupForegroundColor="F5F5F5" />
+   <launcher name="PasserelleWorkBench">
+      <linux icon="icons/passerelle.xpm"/>
+      <macosx icon="icons/passerelle.icns"/>
+      <solaris/>
+      <win useIco="true">
+         <ico path="icons/passerelle.ico"/>
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <license>
+        <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        <text>
+   /* Copyright 2014 - iSencia Belgium NV
+
+   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ */
+         </text>
+   </license>
+
+   <plugins>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="com.isencia.passerelle.actor"/>
+      <plugin id="com.isencia.passerelle.actor.conf"/>
+      <plugin id="com.isencia.passerelle.actor.help"/>
+      <plugin id="com.isencia.passerelle.commons"/>
+      <plugin id="com.isencia.passerelle.commons.ume"/>
+      <plugin id="com.isencia.passerelle.domain.et"/>
+      <plugin id="com.isencia.passerelle.eclipse.resources"/>
+      <plugin id="com.isencia.passerelle.editor.common"/>
+      <plugin id="com.isencia.passerelle.engine"/>
+      <plugin id="com.isencia.passerelle.project.repository.api"/>
+      <plugin id="com.isencia.passerelle.project.repository.impl.filesystem"/>
+      <plugin id="com.isencia.passerelle.runtime"/>
+      <plugin id="com.isencia.passerelle.testsupport"/>
+      <plugin id="com.isencia.passerelle.workbench"/>
+      <plugin id="com.isencia.passerelle.workbench.logging.development" fragment="true"/>
+      <plugin id="com.isencia.passerelle.workbench.model"/>
+      <plugin id="com.isencia.passerelle.workbench.model.editor.graphiti"/>
+      <plugin id="com.isencia.passerelle.workbench.model.editor.ui"/>
+      <plugin id="com.isencia.passerelle.workbench.model.editor.ui.cocoa.macosx.x86_64" fragment="true"/>
+      <plugin id="com.isencia.passerelle.workbench.model.editor.ui.linux.x86" fragment="true"/>
+      <plugin id="com.isencia.passerelle.workbench.model.editor.ui.linux.x86_64" fragment="true"/>
+      <plugin id="com.isencia.passerelle.workbench.model.editor.ui.win32.x86" fragment="true"/>
+      <plugin id="com.isencia.passerelle.workbench.model.editor.ui.win32.x86_64" fragment="true"/>
+      <plugin id="com.isencia.passerelle.workbench.model.ui"/>
+      <plugin id="com.isencia.passerelle.workbench.starter"/>
+      <plugin id="com.isencia.passerelle.workbench.util"/>
+      <plugin id="com.isencia.sherpa.commons.reduced"/>
+      <plugin id="com.microstar"/>
+      <plugin id="com.sun.packages" fragment="true"/>
+      <plugin id="com.thoughtworks.xstream"/>
+      <plugin id="diva"/>
+      <plugin id="javax.el"/>
+      <plugin id="javax.mail"/>
+      <plugin id="javax.servlet"/>
+      <plugin id="javax.servlet.jsp"/>
+      <plugin id="javax.xml"/>
+      <plugin id="org.apache.ant"/>
+      <plugin id="org.apache.commons.beanutils"/>
+      <plugin id="org.apache.commons.codec"/>
+      <plugin id="org.apache.commons.collections"/>
+      <plugin id="org.apache.commons.digester"/>
+      <plugin id="org.apache.commons.io"/>
+      <plugin id="org.apache.commons.lang"/>
+      <plugin id="org.apache.commons.logging"/>
+      <plugin id="org.apache.commons.math"/>
+      <plugin id="org.apache.commons.net"/>
+      <plugin id="org.apache.httpcomponents.httpclient"/>
+      <plugin id="org.apache.httpcomponents.httpcore"/>
+      <plugin id="org.apache.jasper.glassfish"/>
+      <plugin id="org.apache.log4j"/>
+      <plugin id="org.apache.lucene"/>
+      <plugin id="org.apache.lucene.analysis"/>
+      <plugin id="org.apache.lucene.core"/>
+      <plugin id="org.apache.xerces"/>
+      <plugin id="org.apache.xml.resolver"/>
+      <plugin id="org.apache.xml.serializer"/>
+      <plugin id="org.eclipse.ant.core"/>
+      <plugin id="org.eclipse.ant.launching"/>
+      <plugin id="org.eclipse.ant.ui"/>
+      <plugin id="org.eclipse.compare"/>
+      <plugin id="org.eclipse.compare.core"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.databinding"/>
+      <plugin id="org.eclipse.core.databinding.observable"/>
+      <plugin id="org.eclipse.core.databinding.property"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.externaltools"/>
+      <plugin id="org.eclipse.core.filebuffers"/>
+      <plugin id="org.eclipse.core.filesystem"/>
+      <plugin id="org.eclipse.core.filesystem.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.macosx" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.net"/>
+      <plugin id="org.eclipse.core.net.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.net.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.core.net.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.net.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.core.resources"/>
+      <plugin id="org.eclipse.core.resources.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.runtime.compatibility"/>
+      <plugin id="org.eclipse.core.variables"/>
+      <plugin id="org.eclipse.debug.core"/>
+      <plugin id="org.eclipse.debug.ui"/>
+      <plugin id="org.eclipse.draw2d"/>
+      <plugin id="org.eclipse.ecf"/>
+      <plugin id="org.eclipse.ecf.filetransfer"/>
+      <plugin id="org.eclipse.ecf.identity"/>
+      <plugin id="org.eclipse.ecf.provider.filetransfer"/>
+      <plugin id="org.eclipse.ecf.provider.filetransfer.ssl" fragment="true"/>
+      <plugin id="org.eclipse.ecf.ssl" fragment="true"/>
+      <plugin id="org.eclipse.emf.common"/>
+      <plugin id="org.eclipse.emf.common.ui"/>
+      <plugin id="org.eclipse.emf.ecore"/>
+      <plugin id="org.eclipse.emf.ecore.change"/>
+      <plugin id="org.eclipse.emf.ecore.edit"/>
+      <plugin id="org.eclipse.emf.ecore.xmi"/>
+      <plugin id="org.eclipse.emf.edit"/>
+      <plugin id="org.eclipse.emf.edit.ui"/>
+      <plugin id="org.eclipse.emf.transaction"/>
+      <plugin id="org.eclipse.emf.validation"/>
+      <plugin id="org.eclipse.emf.workspace"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.concurrent"/>
+      <plugin id="org.eclipse.equinox.ds"/>
+      <plugin id="org.eclipse.equinox.event"/>
+      <plugin id="org.eclipse.equinox.frameworkadmin"/>
+      <plugin id="org.eclipse.equinox.frameworkadmin.equinox"/>
+      <plugin id="org.eclipse.equinox.http.jetty"/>
+      <plugin id="org.eclipse.equinox.http.registry"/>
+      <plugin id="org.eclipse.equinox.http.servlet"/>
+      <plugin id="org.eclipse.equinox.jsp.jasper"/>
+      <plugin id="org.eclipse.equinox.jsp.jasper.registry"/>
+      <plugin id="org.eclipse.equinox.launcher"/>
+      <plugin id="org.eclipse.equinox.launcher.cocoa.macosx" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.cocoa.macosx.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.win32.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.win32.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.p2.artifact.repository"/>
+      <plugin id="org.eclipse.equinox.p2.console"/>
+      <plugin id="org.eclipse.equinox.p2.core"/>
+      <plugin id="org.eclipse.equinox.p2.director"/>
+      <plugin id="org.eclipse.equinox.p2.director.app"/>
+      <plugin id="org.eclipse.equinox.p2.directorywatcher"/>
+      <plugin id="org.eclipse.equinox.p2.engine"/>
+      <plugin id="org.eclipse.equinox.p2.extensionlocation"/>
+      <plugin id="org.eclipse.equinox.p2.garbagecollector"/>
+      <plugin id="org.eclipse.equinox.p2.jarprocessor"/>
+      <plugin id="org.eclipse.equinox.p2.metadata"/>
+      <plugin id="org.eclipse.equinox.p2.metadata.repository"/>
+      <plugin id="org.eclipse.equinox.p2.operations"/>
+      <plugin id="org.eclipse.equinox.p2.publisher"/>
+      <plugin id="org.eclipse.equinox.p2.publisher.eclipse"/>
+      <plugin id="org.eclipse.equinox.p2.publisher.source"/>
+      <plugin id="org.eclipse.equinox.p2.ql"/>
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins"/>
+      <plugin id="org.eclipse.equinox.p2.repository"/>
+      <plugin id="org.eclipse.equinox.p2.repository.tools"/>
+      <plugin id="org.eclipse.equinox.p2.touchpoint.eclipse"/>
+      <plugin id="org.eclipse.equinox.p2.touchpoint.natives"/>
+      <plugin id="org.eclipse.equinox.p2.transport.ecf"/>
+      <plugin id="org.eclipse.equinox.p2.ui"/>
+      <plugin id="org.eclipse.equinox.p2.ui.importexport"/>
+      <plugin id="org.eclipse.equinox.p2.ui.sdk"/>
+      <plugin id="org.eclipse.equinox.p2.updatechecker"/>
+      <plugin id="org.eclipse.equinox.p2.updatesite"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.equinox.security"/>
+      <plugin id="org.eclipse.equinox.security.macosx" fragment="true"/>
+      <plugin id="org.eclipse.equinox.security.ui"/>
+      <plugin id="org.eclipse.equinox.security.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.equinox.security.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.simpleconfigurator"/>
+      <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator"/>
+      <plugin id="org.eclipse.equinox.transforms.hook" fragment="true"/>
+      <plugin id="org.eclipse.equinox.util"/>
+      <plugin id="org.eclipse.gef"/>
+      <plugin id="org.eclipse.gmf.runtime.common.core"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.draw2d.ui"/>
+      <plugin id="org.eclipse.graphiti"/>
+      <plugin id="org.eclipse.graphiti.doc"/>
+      <plugin id="org.eclipse.graphiti.mm"/>
+      <plugin id="org.eclipse.graphiti.pattern"/>
+      <plugin id="org.eclipse.graphiti.ui"/>
+      <plugin id="org.eclipse.graphiti.ui.capabilities"/>
+      <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.help.base"/>
+      <plugin id="org.eclipse.help.ui"/>
+      <plugin id="org.eclipse.help.webapp"/>
+      <plugin id="org.eclipse.jdt.core"/>
+      <plugin id="org.eclipse.jdt.core.manipulation"/>
+      <plugin id="org.eclipse.jdt.debug"/>
+      <plugin id="org.eclipse.jdt.debug.ui"/>
+      <plugin id="org.eclipse.jdt.junit"/>
+      <plugin id="org.eclipse.jdt.junit.core"/>
+      <plugin id="org.eclipse.jdt.junit.runtime"/>
+      <plugin id="org.eclipse.jdt.launching"/>
+      <plugin id="org.eclipse.jdt.ui"/>
+      <plugin id="org.eclipse.jetty.continuation"/>
+      <plugin id="org.eclipse.jetty.http"/>
+      <plugin id="org.eclipse.jetty.io"/>
+      <plugin id="org.eclipse.jetty.security"/>
+      <plugin id="org.eclipse.jetty.server"/>
+      <plugin id="org.eclipse.jetty.servlet"/>
+      <plugin id="org.eclipse.jetty.util"/>
+      <plugin id="org.eclipse.jface"/>
+      <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.jface.text"/>
+      <plugin id="org.eclipse.ltk.core.refactoring"/>
+      <plugin id="org.eclipse.ltk.ui.refactoring"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.eclipse.osgi.util"/>
+      <plugin id="org.eclipse.pde.build"/>
+      <plugin id="org.eclipse.pde.core"/>
+      <plugin id="org.eclipse.pde.launching"/>
+      <plugin id="org.eclipse.pde.ui"/>
+      <plugin id="org.eclipse.persistence.jpa.equinox.weaving" fragment="true"/>
+      <plugin id="org.eclipse.search"/>
+      <plugin id="org.eclipse.swt"/>
+      <plugin id="org.eclipse.swt.cocoa.macosx" fragment="true"/>
+      <plugin id="org.eclipse.swt.cocoa.macosx.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.team.core"/>
+      <plugin id="org.eclipse.team.ui"/>
+      <plugin id="org.eclipse.text"/>
+      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui.cheatsheets"/>
+      <plugin id="org.eclipse.ui.console"/>
+      <plugin id="org.eclipse.ui.editors"/>
+      <plugin id="org.eclipse.ui.externaltools"/>
+      <plugin id="org.eclipse.ui.forms"/>
+      <plugin id="org.eclipse.ui.ide"/>
+      <plugin id="org.eclipse.ui.intro"/>
+      <plugin id="org.eclipse.ui.navigator"/>
+      <plugin id="org.eclipse.ui.navigator.resources"/>
+      <plugin id="org.eclipse.ui.views"/>
+      <plugin id="org.eclipse.ui.views.log"/>
+      <plugin id="org.eclipse.ui.views.properties.tabbed"/>
+      <plugin id="org.eclipse.ui.win32" fragment="true"/>
+      <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.eclipse.ui.workbench.texteditor"/>
+      <plugin id="org.eclipse.update.configurator"/>
+      <plugin id="org.eclipse.wst.common.core"/>
+      <plugin id="org.eclipse.wst.common.environment"/>
+      <plugin id="org.eclipse.wst.common.frameworks"/>
+      <plugin id="org.eclipse.wst.common.project.facet.core"/>
+      <plugin id="org.eclipse.wst.common.ui"/>
+      <plugin id="org.eclipse.wst.common.uriresolver"/>
+      <plugin id="org.eclipse.wst.sse.core"/>
+      <plugin id="org.eclipse.wst.sse.ui"/>
+      <plugin id="org.eclipse.wst.validation"/>
+      <plugin id="org.eclipse.wst.xml.core"/>
+      <plugin id="org.eclipse.wst.xml.ui"/>
+      <plugin id="org.jdom"/>
+      <plugin id="org.junit"/>
+      <plugin id="org.quartz"/>
+      <plugin id="org.sat4j.core"/>
+      <plugin id="org.sat4j.pb"/>
+      <plugin id="ptolemy.core"/>
+      <plugin id="ptolemy.domains.and.actors"/>
+      <plugin id="ptolemy.gui"/>
+      <plugin id="slf4j.api"/>
+      <plugin id="slf4j.log4j12" fragment="true"/>
+   </plugins>
+
+   <features>
+      <feature id="com.isencia.passerelle.core.feature" version="8.8.0"/>
+      <feature id="com.isencia.passerelle.workbench.feature" version="8.8.0"/>
+      <feature id="ptolemy.feature" version="7.0.1"/>
+   </features>
+
+   <configurations>
+      <plugin id="com.isencia.passerelle.workbench" autoStart="false" startLevel="5" />
+      <plugin id="com.isencia.passerelle.workbench.starter" autoStart="true" startLevel="6" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+   </configurations>
+
+</product>

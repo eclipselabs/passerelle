@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Runtime Test bundle
+Bundle-SymbolicName: com.isencia.passerelle.runtime.test
+Bundle-Version: 8.10.0.qualifier
+Bundle-Activator: com.isencia.passerelle.runtime.test.activator.Activator
+Bundle-Vendor: ISENCIA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.isencia.passerelle.domain.et;version="8.7.0",
+ org.apache.commons.io,
+ org.eclipse.osgi.framework.console;version="1.1.0",
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="1.5.0",
+ org.slf4j;version="1.5.0",
+ ptolemy.actor;version="7.0.1",
+ ptolemy.data.expr;version="7.0.1",
+ ptolemy.domains.pn.kernel;version="7.0.1",
+ ptolemy.kernel;version="7.0.1",
+ ptolemy.kernel.util;version="7.0.1"
+Require-Bundle: com.isencia.passerelle.engine;bundle-version="8.7.0",
+ com.isencia.passerelle.testsupport;bundle-version="8.7.0",
+ com.isencia.passerelle.runtime;bundle-version="8.7.0",
+ com.isencia.passerelle.runtime.repos.impl.filesystem;bundle-version="8.7.0",
+ org.junit,
+ com.isencia.passerelle.runtime.process.impl;bundle-version="8.7.0"

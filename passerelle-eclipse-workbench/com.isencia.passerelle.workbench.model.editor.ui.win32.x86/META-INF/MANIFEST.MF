@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle editor fragment for win32
+Bundle-SymbolicName: com.isencia.passerelle.workbench.model.editor.ui.win32.x86
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: ISENCIA
+Fragment-Host: com.isencia.passerelle.workbench.model.editor.ui;bundle-version="[8.9.0,8.11.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-PlatformFilter: (& (osgi.ws=win32) (osgi.os=win32) (osgi.arch=x86))

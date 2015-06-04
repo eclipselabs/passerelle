@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contexts>
+   <context id="com_isencia_passerelle_actor_general_Console" >
+      <description>
+      <b>Console</b>
+      Class : com.isencia.passerelle.actor.general.Console
+      Description : Dump a message on the console
+      Parameters:
+      - Name : name
+      - Chop output at #chars : Chop length
+      </description>
+      <topic label="details" href="html/com.isencia.passerelle.actor.general.Console.html"/>
+      
+   </context>
+   <context id="name" >
+      <description>Actor name</description>
+   </context>
+   <context id="com_isencia_passerelle_actor_general_Console_Chop output at #chars" >
+      <description>
+      Name : Chop output at #chars
+      Description : Chop length
+      Value type : Number
+      Example: 80
+      Default : 80</description>
+      <topic label="details" href="html/com.isencia.passerelle.actor.general.Console.html#Chop output at chars"/>
+
+   </context>
+   <context id="com_isencia_passerelle_actor_net_SocketClientSender_port" >
+      <description>
+      Name :port
+      Description :port
+      Value type : String
+     </description>
+      <topic label="details" href="html/com.isencia.passerelle.actor.net.SocketClientSender.html#port"/>
+
+   </context>
+   <context id="com_isencia_passerelle_actor_net_SocketClientSender_remote host" >
+      <description>
+      Name : remote host
+      Description : remote host
+      Value type : String
+     </description>
+      <topic label="details" href="html/com.isencia.passerelle.actor.net.SocketClientSender.html#remote host"/>
+
+   </context>
+   <context id="com_isencia_passerelle_actor_net_SocketClientSender_Msg End" >
+      <description>
+      Name : Msg End
+      Description : Msg End
+      Value type : String
+     </description>
+      <topic label="details" href="html/com.isencia.passerelle.actor.net.SocketClientSender.html#Msg End"/>
+
+   </context>
+</contexts>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>RetryLoopActor</title>
+</head>
+
+<body>
+<BODY LANG="en-US" DIR="LTR">
+<H2>RetryLoopActor</H2>
+<H4>com.isencia.passerelle.actor.flow.RetryLoopActor</H4>
+<ul>
+</ul>
+<p>
+This actor supports retry-loop constructions in a Passerelle sequence.
+ <p>
+ A maximal retry count can be configured. Each incoming message is sent out on
+ one of 2 alternative output ports:
+ <ul>
+ <li>when the message has been received N times with N less-or-equal the
+ configured retry count, it is sent out via <code>retryOutput</code>.
+ <li>when it has been received more times than the configured retry count, it
+ gets sent out via <code>noRetryOutput</code>.
+ </ul>
+ </p>
+ <p>
+ The retry management is implemented by adding a named counter value as a
+ message header. A message sent out via the <code>retryOutput</code> should be
+ sent back to the <code>input</code> port when a retry is desired. As it will
+ probably first have passed through one or more other actors, care must be
+ taken to ensure that the message's headers do not get lost/corrupted.
+ Otherwise, e.g. if the counter header gets lost, there is a risk for eternal
+ loops!
+ </p>
+</p>
+<br/><br/>
+<H2>RetryLoopActor Attributes</H2>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Attribute</B></P>
+		</TD>
+		<TD WIDTH="69%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Usage</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%">
+			<P>retryCountParameter</P>
+		</TD>
+		<TD WIDTH="69%">
+			<P>no documentation found</P>
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

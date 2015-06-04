@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="CodeGenerators" class="ptolemy.moml.EntityLibrary">
+  <configure>
+     <?moml
+      <group>
+        <input source="ptolemy/codegen/codegen.xml"/>
+        <input source="ptolemy/copernicus/copernicus.xml"/>
+	<!-- verification is not shipped in 7.0.beta
+	     input source="ptolemy/verification/verification.xml"/ --> 
+      </group>
+    ?>
+  </configure>
+</entity>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="lib/filters-2.0.235.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/flexdock-0.5.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/forms-1.0.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/idw-gpl-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/layout-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/looks-2.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/model-templates.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/skinlf-1.2.11.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/swing-layout-1.0.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/swing-worker-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/swingx-1.6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

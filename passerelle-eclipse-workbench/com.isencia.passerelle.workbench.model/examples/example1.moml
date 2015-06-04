@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="newModel" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="7.0.1">
+    </property>
+    <property name="Director" class="com.isencia.passerelle.domain.cap.Director">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{20, 20}">
+        </property>
+    </property>
+    <port name="InputPort" class="ptolemy.actor.TypedIOPort">
+        <property name="input"/>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{122.0, 217.0}">
+        </property>
+    </port>
+    <entity name="Console" class="com.isencia.passerelle.actor.general.Console">
+        <property name="Receiver Q Capacity (-1)" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <property name="Receiver Q warning size (-1)" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <property name="PassThrough" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="Chop output at #chars" class="ptolemy.data.expr.Parameter" value="80">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{364.0, 216.0}">
+        </property>
+    </entity>
+    <relation name="_R" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <link port="InputPort" relation="_R"/>
+    <link port="Console.requestFinish" relation="_R"/>
+</entity>

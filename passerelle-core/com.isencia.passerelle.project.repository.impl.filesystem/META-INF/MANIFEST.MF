@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle Repository on Filesystem Plug-in
+Bundle-SymbolicName: com.isencia.passerelle.project.repository.impl.filesystem
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: ISENCIA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.isencia.passerelle.model;version="8.7.0",
+ com.isencia.passerelle.util;version="8.7.0",
+ org.apache.commons.io.filefilter,
+ org.eclipse.osgi.framework.console;version="1.0.0",
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="1.3.1",
+ org.slf4j;version="1.5.0"
+Require-Bundle: org.eclipse.equinox.preferences,
+ com.isencia.passerelle.project.repository.api;bundle-version="8.7.0",
+ com.isencia.passerelle.engine;bundle-version="8.7.0",
+ ptolemy.core;bundle-version="7.0.1"
+Export-Package: com.isencia.passerelle.project.repository.impl.filesystem;version="8.7.0"
+Bundle-Activator: com.isencia.passerelle.project.repository.impl.filesystem.activator.Activator

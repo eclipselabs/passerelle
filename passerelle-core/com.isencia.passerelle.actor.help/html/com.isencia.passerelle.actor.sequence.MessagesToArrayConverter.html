@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>MessagesToArrayConverter</title>
+</head>
+
+<body>
+<BODY LANG="en-US" DIR="LTR">
+<H2>MessagesToArrayConverter</H2>
+<H4>com.isencia.passerelle.actor.sequence.MessagesToArrayConverter</H4>
+<ul>
+</ul>
+<p>
+Converts a series of incoming into an outgoing message containing an array
+ with the contents of the incoming msgs. The array is generated when a trigger
+ msg is received. Remark that this actor can not guarantee exact array
+ contents in the standard PN domain (or Passerelle's extension of it), as
+ there's no certainty on the order in which data msgs and the trigger may
+ arrive. For tighter control, use message sequences as input together with the
+ SequenceToArrayConverter.
+</p>
+<br/><br/>
+<H2>MessagesToArrayConverter Attributes</H2>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Attribute</B></P>
+		</TD>
+		<TD WIDTH="69%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Usage</B></P>
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

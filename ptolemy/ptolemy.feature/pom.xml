@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.isencia.passerelle</groupId>
+		<artifactId>ptolemy</artifactId>
+		<version>8.8.0-SNAPSHOT</version>
+	</parent>
+	
+	<groupId>com.isencia.passerelle</groupId>
+	<artifactId>ptolemy.feature</artifactId>
+	<version>7.0.1</version>
+	<packaging>eclipse-feature</packaging>
+	
+	<name>Passerelle :: Ptolemy :: ptolemy.feature</name>
+
+	<properties>
+		<!-- ptolemy versions are final, no re-deploy in nexus -->
+		<deploy.plugin.skip>true</deploy.plugin.skip>
+	</properties>
+</project>

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle processing services configuration bundle
+Bundle-SymbolicName: com.isencia.passerelle.process.conf
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: Isencia
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Service-Component: OSGI-INF/ProcessFactory.xml,
+ OSGI-INF/ProcessManagerService.xml,
+ OSGI-INF/RequestProcessingBroker.xml
+Import-Package: com.isencia.passerelle.process.model.factory;version="8.7.0",
+ com.isencia.passerelle.process.model.impl.factory,
+ com.isencia.passerelle.process.service;version="8.7.0",
+ com.isencia.passerelle.process.service.impl

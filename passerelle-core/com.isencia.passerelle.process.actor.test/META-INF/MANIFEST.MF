@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle process actor tests
+Bundle-SymbolicName: com.isencia.passerelle.process.actor.test
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: isencia
+Fragment-Host: com.isencia.passerelle.process.actor;bundle-version="8.7.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.isencia.passerelle.domain.et;version="8.7.0",
+ com.isencia.util;version="8.7.0",
+ org.eclipse.osgi.framework.console
+Require-Bundle: org.junit;bundle-version="3.8.2",
+ com.isencia.passerelle.testsupport;bundle-version="8.7.0"

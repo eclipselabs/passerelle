@@ -1,0 +1,2 @@
+This product contains software derived from work by 
+Thomas Haas, Robert J. Smith & Stefan Bodewig, in the package com.isencia.util.commandline.

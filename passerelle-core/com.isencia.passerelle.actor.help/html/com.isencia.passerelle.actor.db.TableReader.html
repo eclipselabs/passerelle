@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>TableReader</title>
+</head>
+
+<body>
+<BODY LANG="en-US" DIR="LTR">
+<H2>TableReader</H2>
+<H4>com.isencia.passerelle.actor.db.TableReader</H4>
+<ul>
+</ul>
+<p>
+<p>
+ This actor reads records from a JDBC source, using a query that can be
+ configured using a custom cfg panel containing a query builder wizard.
+ </p>
+ <p>
+ Result records are represented by a Map<String, Object>, where the keys
+ contain the field names and the values have the default Java type matching
+ the DB column type.
+ </p>
+ <p>
+ This actor is a source that sends all result records during its one and only
+ iteration before it wraps up.
+ </p>
+ <p>
+ In order to be able to actually connect to a DB, a corresponding JDBC client
+ driver jar-file must be installed on the classpath, typically under
+ PASSERELLE_HOME/lib/drivers.
+ </p>
+ REMARK : this is an initial version of this actor to provide DB connectivity
+ and demonstrate the usage/configuration of a custom cfg panel. <br>
+ Implementation details may still evolve, e.g. the way a result record is
+ represented in an output message etc.
+</p>
+<br/><br/>
+<H2>TableReader Attributes</H2>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Attribute</B></P>
+		</TD>
+		<TD WIDTH="69%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Usage</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%">
+			<P>driverParam</P>
+		</TD>
+		<TD WIDTH="69%">
+			<P>no documentation found</P>
+		</TD>
+	</TR>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%">
+			<P>passwordParam</P>
+		</TD>
+		<TD WIDTH="69%">
+			<P>no documentation found</P>
+		</TD>
+	</TR>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%">
+			<P>queryParam</P>
+		</TD>
+		<TD WIDTH="69%">
+			<P>no documentation found</P>
+		</TD>
+	</TR>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%">
+			<P>schemaParam</P>
+		</TD>
+		<TD WIDTH="69%">
+			<P>no documentation found</P>
+		</TD>
+	</TR>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%">
+			<P>urlParam</P>
+		</TD>
+		<TD WIDTH="69%">
+			<P>no documentation found</P>
+		</TD>
+	</TR>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%">
+			<P>userParam</P>
+		</TD>
+		<TD WIDTH="69%">
+			<P>no documentation found</P>
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle ET domain Test
+Bundle-SymbolicName: com.isencia.passerelle.domain.et.test
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: ISENCIA
+Fragment-Host: com.isencia.passerelle.domain.et;bundle-version="8.7.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.isencia.passerelle.testsupport;bundle-version="8.7.0"
+Import-Package: com.isencia.passerelle.actor;version="8.7.0",
+ com.isencia.passerelle.actor.control;version="8.7.0",
+ com.isencia.passerelle.actor.convert;version="8.7.0",
+ com.isencia.passerelle.actor.dynaport;version="8.7.0",
+ com.isencia.passerelle.actor.error;version="8.7.0",
+ com.isencia.passerelle.actor.filter;version="8.7.0",
+ com.isencia.passerelle.actor.general;version="8.7.0",
+ com.isencia.passerelle.actor.v5;version="8.7.0",
+ com.isencia.passerelle.core;version="8.7.0",
+ com.isencia.passerelle.domain.cap;version="8.7.0",
+ com.isencia.passerelle.domain.et;version="8.7.0",
+ com.isencia.passerelle.model;version="8.7.0",
+ junit.framework;version="3.8.2",
+ ptolemy.actor;version="7.0.1",
+ ptolemy.data.expr;version="7.0.1",
+ ptolemy.domains.pn.kernel;version="7.0.1",
+ ptolemy.kernel;version="7.0.1",
+ ptolemy.kernel.util;version="7.0.1"

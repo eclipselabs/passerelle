@@ -1,0 +1,116 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="testDoubleVertices" class="com.isencia.passerelle.model.Flow">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="7.0.1">
+    </property>
+    <property name="Passerelle Std" class="com.isencia.passerelle.domain.cap.Director">
+        <property name="_editorFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorFactory">
+        </property>
+        <property name="_editorPaneFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorPaneFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[155.0, 15.0]">
+        </property>
+    </property>
+    <entity name="Constant_1" class="com.isencia.passerelle.testsupport.actor.Const">
+        <property name="_version" class="ptolemy.kernel.attributes.VersionAttribute" value="8.1.0">
+        </property>
+        <property name="_controllerFactory" class="com.isencia.passerelle.actor.gui.PasserelleActorControllerFactory">
+        </property>
+        <property name="_editorFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorFactory">
+        </property>
+        <property name="_editorPaneFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorPaneFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 75.0]">
+        </property>
+    </entity>
+    <entity name="Console_1" class="com.isencia.passerelle.testsupport.actor.DevNullActor">
+        <property name="_version" class="ptolemy.kernel.attributes.VersionAttribute" value="8.1.0">
+        </property>
+        <property name="_controllerFactory" class="com.isencia.passerelle.actor.gui.PasserelleActorControllerFactory">
+        </property>
+        <property name="_editorFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorFactory">
+        </property>
+        <property name="_editorPaneFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorPaneFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{520, 85}">
+        </property>
+    </entity>
+    <entity name="Console_2" class="com.isencia.passerelle.testsupport.actor.DevNullActor">
+        <property name="_version" class="ptolemy.kernel.attributes.VersionAttribute" value="8.1.0">
+        </property>
+        <property name="_controllerFactory" class="com.isencia.passerelle.actor.gui.PasserelleActorControllerFactory">
+        </property>
+        <property name="_editorFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorFactory">
+        </property>
+        <property name="_editorPaneFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorPaneFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[520.0, 185.0]">
+        </property>
+    </entity>
+    <entity name="Console_3" class="com.isencia.passerelle.testsupport.actor.DevNullActor">
+        <property name="_version" class="ptolemy.kernel.attributes.VersionAttribute" value="8.1.0">
+        </property>
+        <property name="_controllerFactory" class="com.isencia.passerelle.actor.gui.PasserelleActorControllerFactory">
+        </property>
+        <property name="_editorFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorFactory">
+        </property>
+        <property name="_editorPaneFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorPaneFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[520.0, 315.0]">
+        </property>
+    </entity>
+    <entity name="Constant_2" class="com.isencia.passerelle.testsupport.actor.Const">
+        <property name="_version" class="ptolemy.kernel.attributes.VersionAttribute" value="8.1.0">
+        </property>
+        <property name="_controllerFactory" class="com.isencia.passerelle.actor.gui.PasserelleActorControllerFactory">
+        </property>
+        <property name="_editorFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorFactory">
+        </property>
+        <property name="_editorPaneFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorPaneFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 175.0]">
+        </property>
+    </entity>
+    <entity name="Constant_3" class="com.isencia.passerelle.testsupport.actor.Const">
+        <property name="_version" class="ptolemy.kernel.attributes.VersionAttribute" value="8.1.0">
+        </property>
+        <property name="_controllerFactory" class="com.isencia.passerelle.actor.gui.PasserelleActorControllerFactory">
+        </property>
+        <property name="_editorFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorFactory">
+        </property>
+        <property name="_editorPaneFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorPaneFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 305.0]">
+        </property>
+    </entity>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+        <vertex name="vertex1" value="[335.0, 195.0]">
+        </vertex>
+    </relation>
+    <relation name="relation_2" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+        <vertex name="vertex1" value="[255.0, 325.0]">
+        </vertex>
+    </relation>
+    <relation name="relation_3" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+        <vertex name="vertex1" value="[380.0, 325.0]">
+        </vertex>
+    </relation>
+    <relation name="relation_4" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <link port="Constant_1.output" relation="relation_4"/>
+    <link port="Console_1.input" relation="relation_4"/>
+    <link port="Console_2.input" relation="relation"/>
+    <link port="Console_3.input" relation="relation_3"/>
+    <link port="Constant_2.output" relation="relation"/>
+    <link port="Constant_3.output" relation="relation_2"/>
+    <link relation1="relation_2" relation2="relation_3"/>
+</entity>

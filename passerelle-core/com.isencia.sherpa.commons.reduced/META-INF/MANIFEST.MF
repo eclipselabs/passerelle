@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sherpabeans Commons
+Bundle-SymbolicName: com.isencia.sherpa.commons.reduced
+Bundle-Version: 6.2.5
+Bundle-Vendor: ISENCIA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: com.isencia.sherpa.commons;version="6.2.5"

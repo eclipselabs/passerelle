@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle Runtime FlowRepository Impl on file system
+Bundle-SymbolicName: com.isencia.passerelle.runtime.repos.impl.filesystem
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: ISENCIA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.isencia.passerelle.runtime;bundle-version="8.8.0"
+Import-Package: com.isencia.passerelle.core;version="8.7.0",
+ com.isencia.passerelle.model;version="8.7.0",
+ com.isencia.sherpa.commons,
+ org.apache.commons.io,
+ org.osgi.framework;version="1.6.0",
+ org.slf4j;version="1.5.0",
+ ptolemy.actor;version="7.0.1",
+ ptolemy.kernel;version="7.0.1",
+ ptolemy.kernel.util;version="7.0.1"
+Export-Package: com.isencia.passerelle.runtime.repos.impl.filesystem;version="8.9.0"
+Bundle-Activator: com.isencia.passerelle.runtime.repos.impl.filesystem.activator.Activator

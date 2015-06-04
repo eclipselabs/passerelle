@@ -1,0 +1,30 @@
+H1 {
+	text-align : left;
+	font-size: large;
+	margin-top : 2em;
+}
+
+H2 {
+	font-size : medium;
+}
+
+H1, H2, H3, H4 { 
+	/* Yuck */
+	font-family: helvetica, sans-serif
+}
+
+DT {
+	margin-bottom: 12;
+	padding-top: 6;
+}
+
+LI {
+	padding-top: 6;
+}
+
+BODY {
+        background: #faf0e6
+
+
+}
+

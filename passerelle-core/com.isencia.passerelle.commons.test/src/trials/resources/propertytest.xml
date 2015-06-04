@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<PropertiesBag name="be.isencia.properties.test.properties">
+   <Security>
+	 	 <!-- Valid entries are: Dummy, LDAP, DB -->
+     <AuthenticationType value="Dummy"/>  
+     <AuthorisationType value="Dummy"/>
+   </Security>
+</PropertiesBag>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<fragment>
+	<extension point="com.isencia.passerelle.engine.actors">
+	
+        <actor class="ptolemy.data.expr.StringParameter"
+            group="com.isencia.passerelle.actor.actorgroup.utilities" 
+            icon="icons/input_field.gif"
+            id="ptolemy.data.expr.StringParameter" 
+            name="StringParameter">
+        </actor>
+		<actor class="ptolemy.vergil.kernel.attributes.TextAttribute"
+			group="com.isencia.passerelle.actor.actorgroup.utilities" 
+			icon="icons/comment.png"
+			id="ptolemy.vergil.kernel.attributes.TextAttribute" 
+			name="Comment">
+		</actor>
+		<actor class="ptolemy.moml.Vertex" 
+			group="com.isencia.passerelle.actor.actorgroup.utilities"
+			icon="icons/vertex.png" 
+			id="Hub" 
+			name="Hub">
+		</actor>
+		<actor class="ptolemy.actor.TypedIOPort" 
+			group="com.isencia.passerelle.actor.actorgroup.utilities"
+			icon="icons/input-submodel.png" 
+			id="Input" 
+			name="Input">
+		</actor>
+		<actor class="ptolemy.actor.TypedIOPort" 
+			group="com.isencia.passerelle.actor.actorgroup.utilities"
+			icon="icons/output-submodel.png" 
+			id="Output" 
+			name="Output">
+		</actor>
+		<actor class="ptolemy.actor.TypedCompositeActor" 
+			group="com.isencia.passerelle.actor.actorgroup.utilities"
+			icon="icons/model.gif" 
+			id="ptolemy.actor.CompositeActor" 
+			name="Submodel">
+		</actor>
+		
+		<actor class="com.isencia.passerelle.domain.cap.Director" 
+			group="com.isencia.passerelle.actor.actorgroup.directors"
+			icon="icons/director.gif" 
+			id="com.isencia.passerelle.domain.cap.Director"
+			name="Process Director">
+		</actor>
+		<actor class="com.isencia.passerelle.domain.et.ETDirector"
+			group="com.isencia.passerelle.actor.actorgroup.directors" 
+			icon="icons/director.gif"
+			id="com.isencia.passerelle.domain.et.ETDirector" 
+			name="Event Director">
+		</actor>
+		
+		<!-- actors that have to do with error handling -->
+		<actor class="com.isencia.passerelle.actor.error.ErrorCatcher"
+			group="com.isencia.passerelle.actor.actorgroup.error" 
+			icon="icons/error-next.png"
+			color="200,50,50"
+			id="com.isencia.passerelle.actor.error.ErrorCatcher" 
+			name="Error Catcher">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.error.ErrorHandlerBySeverity"
+			group="com.isencia.passerelle.actor.actorgroup.error" 
+			icon="icons/error-next.png"
+			color="200,50,50"
+			id="com.isencia.passerelle.actor.error.ErrorHandlerBySeverity" 
+			name="Error Handler by Severity">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.error.ErrorHandlerByCodeRange"
+			group="com.isencia.passerelle.actor.actorgroup.error" 
+			icon="icons/error-next.png"
+			color="200,50,50"
+			id="com.isencia.passerelle.actor.error.ErrorHandlerByCodeRange" 
+			name="Error Handler by ErrorCode range">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.error.ErrorHandlerByCausingActor"
+			group="com.isencia.passerelle.actor.actorgroup.error" 
+			icon="icons/error-next.png"
+			color="200,50,50"
+			id="com.isencia.passerelle.actor.error.ErrorHandlerByCausingActor" 
+			name="Error Handler by Causing actor">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.error.ErrorObserver"
+			group="com.isencia.passerelle.actor.actorgroup.error" 
+			icon="icons/error-next.png"
+			color="200,50,50"
+			id="com.isencia.passerelle.actor.error.ErrorObserver" 
+			name="Error Observer">
+		</actor>
+		
+		<!-- actors that have to do with flow constructs -->
+		<actor class="com.isencia.passerelle.actor.control.Trigger"
+			group="com.isencia.passerelle.actor.actorgroup.flow" 
+			icon="icons/trigger.gif" 
+			id="com.isencia.passerelle.actor.control.Trigger"
+			name="Trigger">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.control.Stop" 
+			group="com.isencia.passerelle.actor.actorgroup.flow"
+			icon="icons/stop.gif" 
+			id="com.isencia.passerelle.actor.control.Stop"
+			name="Stop">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.flow.Synchronizer" 
+			group="com.isencia.passerelle.actor.actorgroup.flow" 
+			icon="icons/sync_multi.gif" 
+			id="com.isencia.passerelle.actor.synchronizer"
+			name="Synchronizer">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.general.DevNullActor" 
+			group="com.isencia.passerelle.actor.actorgroup.flow" 
+			icon="icons/trash.gif" 
+			id="com.isencia.passerelle.actor.general.DevNullActor"
+			name="Synchronizer">
+		</actor>
+
+		<!-- timers etc -->
+		<actor id="com.isencia.passerelle.actor.throttlingdelay" 
+			class="com.isencia.passerelle.actor.flow.Delay"
+			group="com.isencia.passerelle.actor.actorgroup.time" 
+			icon="icons/sleeping.gif"
+			name="Throttling Delay">
+		</actor>
+		<actor id="com.isencia.passerelle.actor.timer" 
+			class="com.isencia.passerelle.actor.control.Timer"
+			group="com.isencia.passerelle.actor.actorgroup.time" 
+			icon="icons/time2.png"
+			name="Timer">
+		</actor>
+
+		<!-- miscellaneous -->
+		<actor class="com.isencia.passerelle.actor.convert.HeaderModifier"
+			group="com.isencia.passerelle.actor.actorgroup.general" 
+			icon="icons/substitute.gif"
+			id="com.isencia.passerelle.actor.convert.HeaderModifier" 
+			name="Header Modifier">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.general.Counter"
+			group="com.isencia.passerelle.actor.actorgroup.general" 
+			 icon="icons/counter.png" 
+			id="com.isencia.passerelle.actor.general.Counter"
+			name="Counter">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.general.CommandExecutor"
+			group="com.isencia.passerelle.actor.actorgroup.general" 
+			icon="icons/cmd.gif"
+			id="com.isencia.passerelle.actor.general.CommandExecutor" 
+			name="Cmd Executor">
+		</actor>
+		
+		<!--  sources -->
+		<actor class="com.isencia.passerelle.actor.io.FileReader" 
+			group="com.isencia.passerelle.actor.actorgroup.sources"
+			icon="icons/file_open.gif" 
+			id="com.isencia.passerelle.actor.io.FileReader"
+			color="200,50,50" 
+			name="File Reader">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.mail.MailReceiver" 
+			group="com.isencia.passerelle.actor.actorgroup.sources"
+			icon="icons/mail.gif" 
+			id="com.isencia.passerelle.actor.mail.MailReceiver"
+			color="200,50,50" 
+			name="Mail Receiver">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.net.SocketServerReceiver" 
+			group="com.isencia.passerelle.actor.actorgroup.sources"
+			icon="icons/connect.png" 
+			id="com.isencia.passerelle.actor.net.SocketServerReceiver"
+			color="200,50,50" 
+			name="Socket Server">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.general.Const" 
+			group="com.isencia.passerelle.actor.actorgroup.sources"
+			icon="icons/text.gif" 
+			id="com.isencia.passerelle.actor.general.Const"
+			color="200,50,50" 
+			name="Constant">
+		</actor>
+		
+		<!--  sinks -->
+		<actor class="com.isencia.passerelle.actor.io.FileWriter" 
+			group="com.isencia.passerelle.actor.actorgroup.sinks"
+			icon="icons/file_save.gif" 
+			id="com.isencia.passerelle.actor.io.FileWriter"
+			name="File Writer">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.mail.SMTPSender" 
+			group="com.isencia.passerelle.actor.actorgroup.sinks"
+			icon="icons/mail.gif" 
+			id="com.isencia.passerelle.actor.mail.SMTPSender"
+			name="Mail Sender">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.net.SocketClientSender" 
+			group="com.isencia.passerelle.actor.actorgroup.sinks"
+			icon="icons/connect.png" 
+			id="com.isencia.passerelle.actor.net.SocketClientSender"
+			name="Socket Client">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.general.Console"
+			group="com.isencia.passerelle.actor.actorgroup.sinks"
+			 icon="icons/writeout.gif" 
+			id="com.isencia.passerelle.actor.general.Console"
+			name="Console">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.general.TracerConsole"
+			group="com.isencia.passerelle.actor.actorgroup.sinks" 
+			 icon="icons/writeout.gif" 
+			id="com.isencia.passerelle.actor.general.TracerConsole"
+			name="Tracer Console">
+		</actor>
+		<actor class="com.isencia.passerelle.actor.general.ErrorConsole"
+			group="com.isencia.passerelle.actor.actorgroup.sinks" 
+			 icon="icons/writeerr.gif" 
+			id="com.isencia.passerelle.actor.general.ErrorConsole"
+			name="Error Console">
+		</actor>
+		
+		<!-- msg-sequence handling actors -->
+		<actor id="com.isencia.passerelle.actor.sequencetoarrayconverter"
+			class="com.isencia.passerelle.actor.sequence.SequenceToArrayConverter"
+			group="com.isencia.passerelle.actor.actorgroup.msg" 
+			icon="icons/seq.gif"
+			name="SequenceToArrayConverter">
+		</actor>
+		<actor id="com.isencia.passerelle.actor.arraytosequenceconverter"
+			class="com.isencia.passerelle.actor.sequence.ArrayToSequenceConverter"
+			group="com.isencia.passerelle.actor.actorgroup.msg" 
+			icon="icons/seq.gif"
+			name="ArrayToSequenceConverter">
+		</actor>
+		<actor id="com.isencia.passerelle.actor.sequencetracker"
+			class="com.isencia.passerelle.actor.sequence.SequenceTracker" 
+			group="com.isencia.passerelle.actor.actorgroup.msg"
+			icon="icons/seq_complete.gif" 
+			name="SequenceTracker">
+		</actor>
+		
+		<!-- place holder for a new actor-oriented submodel class -->
+		<actor class="com.isencia.passerelle.model.Flow" 
+			group="com.isencia.passerelle.actor.actorgroup.submodels"
+			id="ptolemy.actor.Submodel" 
+			icon="icons/flow.png" 
+			name="Shared Submodel">
+		</actor>
+	</extension>
+	<extension point="com.isencia.passerelle.engine.actorGroups">
+		<actorgroup icon="icons/utilities.png"
+			id="com.isencia.passerelle.actor.actorgroup.utilities" name="Utilities" open="true" priority="1000">
+		</actorgroup>
+		<actorgroup id="com.isencia.passerelle.actor.actorgroup.directors" name="Directors" open="false"
+			parent="com.isencia.passerelle.actor.actorgroup.utilities">
+		</actorgroup>
+		<actorgroup id="com.isencia.passerelle.actor.actorgroup.general" name="General" open="false" priority="500">
+		</actorgroup>
+		<actorgroup id="com.isencia.passerelle.actor.actorgroup.sources" name="Sources" open="false"
+			parent="com.isencia.passerelle.actor.actorgroup.general">
+		</actorgroup>
+		<actorgroup id="com.isencia.passerelle.actor.actorgroup.sinks" name="Sinks" open="false"
+			parent="com.isencia.passerelle.actor.actorgroup.general">
+		</actorgroup>
+		<actorgroup id="com.isencia.passerelle.actor.actorgroup.flow" name="Flow" open="false"
+			parent="com.isencia.passerelle.actor.actorgroup.general">
+		</actorgroup>
+		<actorgroup id="com.isencia.passerelle.actor.actorgroup.error" name="Error Control" open="false"
+			parent="com.isencia.passerelle.actor.actorgroup.general">
+		</actorgroup>
+		<actorgroup id="com.isencia.passerelle.actor.actorgroup.time" name="Time Control" open="false"
+			parent="com.isencia.passerelle.actor.actorgroup.general">
+		</actorgroup>
+		<actorgroup id="com.isencia.passerelle.actor.actorgroup.msg" name="Msg sequences" open="false"
+			parent="com.isencia.passerelle.actor.actorgroup.general">
+		</actorgroup>
+		<actorgroup id="com.isencia.passerelle.actor.actorgroup.submodels" name="Submodels" open="false" priority="0">
+		</actorgroup>
+	</extension>
+</fragment>

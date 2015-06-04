@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle Runtime JMX Server
+Bundle-SymbolicName: com.isencia.passerelle.runtime.jmx.server
+Bundle-Version: 8.10.0.qualifier
+Bundle-Activator: com.isencia.passerelle.runtime.jmx.server.activator.Activator
+Bundle-Vendor: ISENCIA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.isencia.passerelle.core;version="8.7.0",
+ com.isencia.passerelle.model;version="8.7.0",
+ com.isencia.passerelle.runtime;version="8.7.0",
+ com.isencia.passerelle.runtime.jmx;version="8.7.0",
+ com.isencia.passerelle.runtime.process;version="8.7.0",
+ com.isencia.passerelle.runtime.repository;version="8.7.0",
+ com.isencia.sherpa.commons,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="1.5.0"

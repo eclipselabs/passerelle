@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle Engine Test
+Bundle-SymbolicName: com.isencia.passerelle.engine.test
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: ISENCIA
+Fragment-Host: com.isencia.passerelle.engine;bundle-version="8.7.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.apache.log4j;bundle-version="1.2.14",
+ org.junit;bundle-version="3.8.2",
+ com.isencia.passerelle.testsupport;bundle-version="8.7.0"
+Import-Package: org.eclipse.osgi.framework.console;version="1.1.0"

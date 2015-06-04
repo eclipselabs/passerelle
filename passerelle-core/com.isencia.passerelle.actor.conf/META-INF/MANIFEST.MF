@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle Actor Config
+Bundle-SymbolicName: com.isencia.passerelle.actor.conf;singleton:=true
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: ISENCIA
+Export-Package: icons

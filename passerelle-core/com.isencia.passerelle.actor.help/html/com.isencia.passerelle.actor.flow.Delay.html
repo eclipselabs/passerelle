@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Delay</title>
+</head>
+
+<body>
+<BODY LANG="en-US" DIR="LTR">
+<H2>Delay</H2>
+<H4>com.isencia.passerelle.actor.flow.Delay</H4>
+<ul>
+</ul>
+<p>
+Simple actor that reads input tokens and and forwards them to the output port
+ after a configurable accumulating delay (ms).
+ <p>
+ This actor picks a received message, then sleeps for the configured time,
+ then sends out the received message. And then does it again for the next received message.
+ </p>
+ <p>
+ The net-result is a throttling on a received stream of messages. 
+ I.e. when incoming messages arrive with a higher frequency than the configured delay, this actor buffers them
+ and sends them out one-by-one with approximately constant time intervals.
+ When the incoming message stream is "slower" than the configured delay, i.e. messages arrive with an interval that is
+ longer than the configured delay, this actor results in a constant delay for each message. 
+ </p>
+</p>
+<br/><br/>
+<H2>Delay Attributes</H2>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Attribute</B></P>
+		</TD>
+		<TD WIDTH="69%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Usage</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%">
+			<P>timeParameter</P>
+		</TD>
+		<TD WIDTH="69%">
+			<P>no documentation found</P>
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

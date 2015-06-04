@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="testWithSubModel" class="com.isencia.passerelle.model.Flow">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="7.0.1">
+    </property>
+    <property name="Passerelle Std" class="com.isencia.passerelle.domain.cap.Director">
+    </property>
+    <entity name="helloSubModel" class="helloSubModel">
+    </entity>
+    <entity name="Sink" class="com.isencia.passerelle.testsupport.actor.DevNullActor">
+    </entity>
+    <entity name="Source" class="com.isencia.passerelle.testsupport.actor.Const">
+        <property name="value" class="ptolemy.data.expr.StringParameter" value="hello 1">
+        </property>
+    </entity>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <relation name="relation_2" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <link port="helloSubModel.input" relation="relation"/>
+    <link port="helloSubModel.output" relation="relation_2"/>
+    <link port="Sink.input" relation="relation_2"/>
+    <link port="Source.output" relation="relation"/>
+</entity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="newModel" class="com.isencia.passerelle.model.Flow">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="7.0.1">
+    </property>
+    <property name="Soleil Std" class="fr.soleil.passerelle.domain.BasicDirector">
+        <property name="_editorFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorFactory">
+        </property>
+        <property name="_editorPaneFactory" class="com.isencia.passerelle.actor.gui.PasserelleEditorPaneFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{200, 105}">
+        </property>
+    </property>
+</entity>

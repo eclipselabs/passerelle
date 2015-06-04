@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>SequenceTracker</title>
+</head>
+
+<body>
+<BODY LANG="en-US" DIR="LTR">
+<H2>SequenceTracker</H2>
+<H4>com.isencia.passerelle.actor.sequence.SequenceTracker</H4>
+<ul>
+</ul>
+<p>
+Keeps track of all sequences for which messages pass through it:
+ <ul>
+ <li>each message in a sequence is maintained in cache until a feedback
+ message arrives via the <code>handled</code> input port for that message
+ <li>when a sequence has completely been handled, the tracker generates a
+ corresponding notification msg via its <code>seqFinished</code> output port.
+ </ul>
+</p>
+<br/><br/>
+<H2>SequenceTracker Attributes</H2>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Attribute</B></P>
+		</TD>
+		<TD WIDTH="69%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Usage</B></P>
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" size="1133,3432" id="LoudAndClearerwincore0" metadata="nsuml-1.4" initialized="true" showWireOptions="3" zoom="0.3458870168483647">
+  <children xsi:type="editmodel:ClassEditModel" location="1838,1381" size="159,85" id="LoudAndClearerwincore221" runTimeClassModel="LoudAndClearerwincore464;LoudAndClearerwincore462">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="117,36">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore462"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore464"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="1615,1381" size="173,85" id="LoudAndClearerwincore470" runTimeClassModel="LoudAndClearerwincore471;LoudAndClearerwincore473">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="130,36">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore473"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore471"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="1349,1381" size="216,85" id="LoudAndClearerwincore115" runTimeClassModel="LoudAndClearerwincore481;LoudAndClearerwincore479">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="165,36">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore481"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore479"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="340,50" size="332,29" targetConnections="//@children.4/@sourceConnections.1" id="LoudAndClearerwincore274" runTimeClassModel="LoudAndClearerwincore293;LoudAndClearerwincore295;LoudAndClearerwincore291;LoudAndClearerwincore289">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="462,335" size="237,180" id="LoudAndClearerwincore217" runTimeClassModel="LoudAndClearerwincore278;LoudAndClearerwincore269;LoudAndClearerwincore276;LoudAndClearerwincore285;LoudAndClearerwincore287;LoudAndClearerwincore281;LoudAndClearerwincore274;LoudAndClearerwincore283;LoudAndClearerwincore271;LoudAndClearerwincore273">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="176,90">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore278"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore283"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore287"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore281"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore285"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="130,31"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" id="LoudAndClearerwincore271" connectionRouterKind="Manhattan" source="//@children.4" target="//@children.14" targetEnd="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1">
+      <children xsi:type="editmodel:AssociationEndEditModel" id="LoudAndClearerwincore271" navigable="true" flags="2" multiplicityLabel="//@children.4/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.4/@sourceConnections.0/@children.0/@children.0">
+        <children xsi:type="editmodel:LabelEditModel" size="46,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" size="19,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="-1,0" attachSource="true"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" id="LoudAndClearerwincore273" connectionRouterKind="Manhattan" source="//@children.4" target="//@children.3" targetEnd="//@children.4/@sourceConnections.1/@children.0" sourceEnd="//@children.4/@sourceConnections.1/@children.1">
+      <children xsi:type="editmodel:AssociationEndEditModel" id="LoudAndClearerwincore273" navigable="true" flags="2" multiplicityLabel="//@children.4/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.4/@sourceConnections.1/@children.0/@children.0">
+        <children xsi:type="editmodel:LabelEditModel" size="52,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" size="19,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="-1,0" attachSource="true"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" location="1279,102" size="159,135" stereotype="interface" targetConnections="//@children.8/@sourceConnections.1 //@children.7/@sourceConnections.0" id="LoudAndClearerwincore579" runTimeClassModel="LoudAndClearerwincore627;LoudAndClearerwincore623;LoudAndClearerwincore620;LoudAndClearerwincore625">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="90,72">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore627"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore625"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore623"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore620"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="1382,287" size="180,193" id="LoudAndClearerwincore672" runTimeClassModel="LoudAndClearerwincore673;LoudAndClearerwincore699;LoudAndClearerwincore695;LoudAndClearerwincore693;LoudAndClearerwincore682;LoudAndClearerwincore727;LoudAndClearerwincore685;LoudAndClearerwincore691;LoudAndClearerwincore705;LoudAndClearerwincore680;LoudAndClearerwincore716;LoudAndClearerwincore701;LoudAndClearerwincore675;LoudAndClearerwincore697;LoudAndClearerwincore722;LoudAndClearerwincore689;LoudAndClearerwincore703;LoudAndClearerwincore708">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="136,144">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore695"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore701"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore716"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore699"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore697"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore703"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore705"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore708"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" connectionRouterKind="Manual" source="//@children.6" target="//@children.7/@sourceConnections.0" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="90,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="1141,287" size="211,139" id="LoudAndClearerwincore612" runTimeClassModel="LoudAndClearerwincore638;LoudAndClearerwincore640;LoudAndClearerwincore634;LoudAndClearerwincore642;LoudAndClearerwincore648;LoudAndClearerwincore646;LoudAndClearerwincore644;LoudAndClearerwincore650;LoudAndClearerwincore636;LoudAndClearerwincore639;LoudAndClearerwincore632;LoudAndClearerwincore652">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="160,90">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore640"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore648"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore642"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore644"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore652"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.6/@sourceConnections.0" id="LoudAndClearerwincore613" connectionRouterKind="GeneralizationManhattan" source="//@children.7" target="//@children.5" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="79,135" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="1252,1155" size="198,175" id="LoudAndClearerwincore575" runTimeClassModel="LoudAndClearerwincore576;LoudAndClearerwincore598;LoudAndClearerwincore582;LoudAndClearerwincore587;LoudAndClearerwincore594;LoudAndClearerwincore596;LoudAndClearerwincore591;LoudAndClearerwincore600;LoudAndClearerwincore578;LoudAndClearerwincore589;LoudAndClearerwincore584">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="148,126">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore584"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore594"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore598"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore589"/>
+      <children xsi:type="editmodel:MethodEditModel" location="201,2749" id="LoudAndClearerwincore596"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore600"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore591"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" connectionRouterKind="Manual" source="//@children.8" target="//@children.10" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="-1,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" id="LoudAndClearerwincore578" connectionRouterKind="Manhattan" source="//@children.8" target="//@children.5" targetEnd="//@children.8/@sourceConnections.1/@children.0" sourceEnd="//@children.8/@sourceConnections.1/@children.1">
+      <children xsi:type="editmodel:AssociationEndEditModel" id="LoudAndClearerwincore578" navigable="true" flags="2" multiplicityLabel="//@children.8/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.8/@sourceConnections.1/@children.0/@children.0">
+        <children xsi:type="editmodel:LabelEditModel" size="52,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" size="19,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="-1,0" attachSource="true"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" location="1144,566" size="192,225" stereotype="interface" targetConnections="//@children.10/@sourceConnections.0" id="LoudAndClearerwincore355" runTimeClassModel="LoudAndClearerwincore490;LoudAndClearerwincore505;LoudAndClearerwincore497;LoudAndClearerwincore503;LoudAndClearerwincore509;LoudAndClearerwincore500;LoudAndClearerwincore507;LoudAndClearerwincore492;LoudAndClearerwincore487">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="169,162">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore492"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore497"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore507"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore490"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore509"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore505"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore503"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore500"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore487"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="1144,841" size="192,265" targetConnections="//@children.8/@sourceConnections.0" id="LoudAndClearerwincore436" runTimeClassModel="LoudAndClearerwincore543;LoudAndClearerwincore550;LoudAndClearerwincore518;LoudAndClearerwincore528;LoudAndClearerwincore553;LoudAndClearerwincore520;LoudAndClearerwincore531;LoudAndClearerwincore548;LoudAndClearerwincore537;LoudAndClearerwincore526;LoudAndClearerwincore522;LoudAndClearerwincore533;LoudAndClearerwincore555;LoudAndClearerwincore524;LoudAndClearerwincore535;LoudAndClearerwincore540;LoudAndClearerwincore546">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="169,216">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore526"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore537"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore540"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore543"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore546"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore531"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore533"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore535"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore548"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore550"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore553"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore528"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="LoudAndClearerwincore438" connectionRouterKind="Manual" source="//@children.10" target="//@children.9" targetEnd="//@children.10/@sourceConnections.0/@children.1" sourceEnd="//@children.10/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,-1" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="1143,1638" size="154,283" id="LoudAndClearerwincore375" runTimeClassModel="LoudAndClearerwincore416;LoudAndClearerwincore390;LoudAndClearerwincore382;LoudAndClearerwincore400;LoudAndClearerwincore393;LoudAndClearerwincore386;LoudAndClearerwincore378;LoudAndClearerwincore422;LoudAndClearerwincore414;LoudAndClearerwincore419;LoudAndClearerwincore407;LoudAndClearerwincore402;LoudAndClearerwincore398;LoudAndClearerwincore384;LoudAndClearerwincore395;LoudAndClearerwincore410;LoudAndClearerwincore380;LoudAndClearerwincore404;LoudAndClearerwincore412;LoudAndClearerwincore376">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="118,234">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore395"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore393"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore404"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore407"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore410"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore398"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore400"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore412"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore402"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore414"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore416"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore419"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore422"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" connectionRouterKind="Manual" source="//@children.11" target="//@children.12" targetEnd="//@children.11/@sourceConnections.0/@children.1" sourceEnd="//@children.11/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,-1" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" location="1141,1381" size="158,207" stereotype="interface" targetConnections="//@children.11/@sourceConnections.0" id="LoudAndClearerwincore348" runTimeClassModel="LoudAndClearerwincore368;LoudAndClearerwincore350;LoudAndClearerwincore366;LoudAndClearerwincore352;LoudAndClearerwincore362;LoudAndClearerwincore364;LoudAndClearerwincore354;LoudAndClearerwincore359">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,144">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore354"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore368"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore362"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore352"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore350"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore366"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore364"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore359"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="348,963" size="187,283" targetConnections="//@children.15/@sourceConnections.0" id="LoudAndClearerwincore147" runTimeClassModel="LoudAndClearerwincore172;LoudAndClearerwincore194;LoudAndClearerwincore157;LoudAndClearerwincore165;LoudAndClearerwincore186;LoudAndClearerwincore197;LoudAndClearerwincore191;LoudAndClearerwincore179;LoudAndClearerwincore168;LoudAndClearerwincore150;LoudAndClearerwincore184;LoudAndClearerwincore159;LoudAndClearerwincore148;LoudAndClearerwincore174;LoudAndClearerwincore163;LoudAndClearerwincore170;LoudAndClearerwincore155;LoudAndClearerwincore188;LoudAndClearerwincore182">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="164,234">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore163"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore174"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore179"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore182"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore168"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore172"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore184"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore170"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore197"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore186"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore188"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore191"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore165"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="LoudAndClearerwincore1156" connectionRouterKind="Manual" source="//@children.13" target="//@children.14" targetEnd="//@children.13/@sourceConnections.0/@children.1" sourceEnd="//@children.13/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,-1" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" location="348,670" size="187,243" stereotype="interface" targetConnections="//@children.13/@sourceConnections.0 //@children.4/@sourceConnections.0" id="LoudAndClearerwincore89" runTimeClassModel="LoudAndClearerwincore333;LoudAndClearerwincore338;LoudAndClearerwincore330;LoudAndClearerwincore328;LoudAndClearerwincore323;LoudAndClearerwincore316;LoudAndClearerwincore325;LoudAndClearerwincore336;LoudAndClearerwincore321;LoudAndClearerwincore319">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="164,180">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore330"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore333"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore323"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore336"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore321"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore328"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore319"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore338"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore325"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore316"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="351,1296" size="181,175" id="LoudAndClearerwincore227" runTimeClassModel="LoudAndClearerwincore234;LoudAndClearerwincore232;LoudAndClearerwincore242;LoudAndClearerwincore228;LoudAndClearerwincore246;LoudAndClearerwincore251;LoudAndClearerwincore244;LoudAndClearerwincore230;LoudAndClearerwincore249;LoudAndClearerwincore240;LoudAndClearerwincore237">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="134,126">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore234"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore242"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore244"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore249"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore240"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore246"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore251"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" connectionRouterKind="Manual" source="//@children.15" target="//@children.13" targetEnd="//@children.15/@sourceConnections.0/@children.1" sourceEnd="//@children.15/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="-1,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" id="LoudAndClearerwincore232" connectionRouterKind="Manhattan" source="//@children.15" target="//@children.20" targetEnd="//@children.15/@sourceConnections.1/@children.0" sourceEnd="//@children.15/@sourceConnections.1/@children.1">
+      <children xsi:type="editmodel:AssociationEndEditModel" id="LoudAndClearerwincore232" navigable="true" flags="2" multiplicityLabel="//@children.15/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.15/@sourceConnections.1/@children.0/@children.0">
+        <children xsi:type="editmodel:LabelEditModel" size="55,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" size="19,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="-1,0" attachSource="true"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="1612,341" size="204,229" id="LoudAndClearerwincore64" runTimeClassModel="LoudAndClearerwincore102;LoudAndClearerwincore65;LoudAndClearerwincore76;LoudAndClearerwincore97;LoudAndClearerwincore80;LoudAndClearerwincore69;LoudAndClearerwincore84;LoudAndClearerwincore88;LoudAndClearerwincore99;LoudAndClearerwincore74;LoudAndClearerwincore105;LoudAndClearerwincore95;LoudAndClearerwincore67;LoudAndClearerwincore86;LoudAndClearerwincore82;LoudAndClearerwincore93">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="155,180">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore80"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore88"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore93"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore82"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore84"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore95"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore86"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore97"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore99"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore102"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.18/@sourceConnections.0" id="LoudAndClearerwincore871" connectionRouterKind="GeneralizationManhattan" source="//@children.16" target="//@children.17" targetEnd="//@children.16/@sourceConnections.0/@children.1" sourceEnd="//@children.16/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="102,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="74,189" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" location="1744,102" size="148,189" stereotype="interface" targetConnections="//@children.16/@sourceConnections.0" id="LoudAndClearerwincore776" runTimeClassModel="LoudAndClearerwincore793;LoudAndClearerwincore787;LoudAndClearerwincore778;LoudAndClearerwincore781;LoudAndClearerwincore784;LoudAndClearerwincore789;LoudAndClearerwincore791">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,126">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore781"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore793"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore787"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore791"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore789"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore784"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore778"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="1846,341" size="153,252" id="LoudAndClearerwincore800" runTimeClassModel="LoudAndClearerwincore831;LoudAndClearerwincore814;LoudAndClearerwincore803;LoudAndClearerwincore810;LoudAndClearerwincore828;LoudAndClearerwincore833;LoudAndClearerwincore807;LoudAndClearerwincore817;LoudAndClearerwincore808;LoudAndClearerwincore838;LoudAndClearerwincore819;LoudAndClearerwincore805;LoudAndClearerwincore821;LoudAndClearerwincore801;LoudAndClearerwincore812;LoudAndClearerwincore835;LoudAndClearerwincore826;LoudAndClearerwincore824">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,162">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore812"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore828"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore826"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore831"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore833"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore838"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore824"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore835"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore814"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="130,31">
+      <children xsi:type="editmodel:ClassEditModel" size="130,29" targetConnections="//@children.18/@sourceConnections.1" id="LoudAndClearerwincore808" runTimeClassModel="LoudAndClearerwincore840">
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference"/>
+      </children>
+    </children>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" connectionRouterKind="Manual" source="//@children.18" target="//@children.16/@sourceConnections.0" targetEnd="//@children.18/@sourceConnections.0/@children.1" sourceEnd="//@children.18/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" id="LoudAndClearerwincore807" connectionRouterKind="Manhattan" source="//@children.18" target="//@children.18/@children.2/@children.0" targetEnd="//@children.18/@sourceConnections.1/@children.0" sourceEnd="//@children.18/@sourceConnections.1/@children.1">
+      <children xsi:type="editmodel:AssociationEndEditModel" id="LoudAndClearerwincore807" navigable="true" flags="2" multiplicityLabel="//@children.18/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.18/@sourceConnections.1/@children.0/@children.0">
+        <children xsi:type="editmodel:LabelEditModel" size="52,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" size="19,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" attachSource="true"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="50,1404" size="218,139" id="LoudAndClearerwincore20" runTimeClassModel="LoudAndClearerwincore29;LoudAndClearerwincore35;LoudAndClearerwincore39;LoudAndClearerwincore26;LoudAndClearerwincore37;LoudAndClearerwincore32;LoudAndClearerwincore21;LoudAndClearerwincore30">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="165,90">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore30"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore37"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore35"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore32"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore39"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" connectionRouterKind="Manual" source="//@children.19" target="//@children.20" targetEnd="//@children.19/@sourceConnections.0/@children.1" sourceEnd="//@children.19/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="-1,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" location="76,1219" size="166,135" stereotype="interface" targetConnections="//@children.19/@sourceConnections.0 //@children.15/@sourceConnections.1" id="LoudAndClearerwincore1" runTimeClassModel="LoudAndClearerwincore3;LoudAndClearerwincore8;LoudAndClearerwincore10;LoudAndClearerwincore12">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="99,72">
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore10"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore8"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore3"/>
+      <children xsi:type="editmodel:MethodEditModel" id="LoudAndClearerwincore12"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showInterfaceStereotype="true" showClassStereotype="true" showPackageStereotype="true"/>
+</editmodel:ClassDiagramEditModel>

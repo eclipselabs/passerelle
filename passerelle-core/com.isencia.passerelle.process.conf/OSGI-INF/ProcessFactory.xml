@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="init" deactivate="destroy" immediate="true" name="ProcessFactory">
+   <implementation class="com.isencia.passerelle.process.model.impl.factory.ProcessFactoryImpl"/>
+   <service>
+      <provide interface="com.isencia.passerelle.process.model.factory.ProcessFactory"/>
+   </service>
+</scr:component>

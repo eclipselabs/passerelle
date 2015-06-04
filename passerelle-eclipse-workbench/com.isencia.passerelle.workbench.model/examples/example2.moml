@@ -1,0 +1,171 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="newModel" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="7.0.1">
+    </property>
+    <property name="Director" class="com.isencia.passerelle.domain.cap.Director">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{20, 20}">
+        </property>
+    </property>
+    <entity name="FileReader" class="com.isencia.passerelle.actor.io.FileReader">
+        <property name="Receiver Q Capacity (-1)" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <property name="Receiver Q warning size (-1)" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <property name="_icon" class="com.isencia.passerelle.actor.gui.EditorIcon">
+        </property>
+        <property name="PassThrough" class="ptolemy.data.expr.Parameter" value="false">
+            <property name="style" class="ptolemy.actor.gui.style.CheckBoxStyle">
+            </property>
+        </property>
+        <property name="Path" class="ptolemy.data.expr.FileParameter" value="">
+        </property>
+        <property name="Encoding" class="ptolemy.data.expr.StringParameter" value="">
+        </property>
+        <property name="Input Type" class="ptolemy.data.expr.StringParameter" value="">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{86.0, 205.0}">
+        </property>
+        <port name="requestFinish" class="com.isencia.passerelle.core.ControlPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="error" class="com.isencia.passerelle.core.ErrorPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="error" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="hasFired" class="com.isencia.passerelle.core.ControlPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="hasFinished" class="com.isencia.passerelle.core.ControlPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="output" class="com.isencia.passerelle.core.Port">
+            <property name="output"/>
+            <property name="multiport"/>
+        </port>
+        <port name="trigger" class="com.isencia.passerelle.core.Port">
+            <property name="input"/>
+            <property name="multiport"/>
+        </port>
+    </entity>
+    <entity name="Console" class="com.isencia.passerelle.actor.general.Console">
+        <property name="Receiver Q Capacity (-1)" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <property name="Receiver Q warning size (-1)" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <property name="_icon" class="com.isencia.passerelle.actor.gui.EditorIcon">
+        </property>
+        <property name="PassThrough" class="ptolemy.data.expr.Parameter" value="false">
+            <property name="style" class="ptolemy.actor.gui.style.CheckBoxStyle">
+            </property>
+        </property>
+        <property name="Chop output at #chars" class="ptolemy.data.expr.Parameter" value="80">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{418.0, 236.0}">
+        </property>
+        <port name="requestFinish" class="com.isencia.passerelle.core.ControlPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="error" class="com.isencia.passerelle.core.ErrorPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="error" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="hasFired" class="com.isencia.passerelle.core.ControlPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="hasFinished" class="com.isencia.passerelle.core.ControlPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="input" class="com.isencia.passerelle.core.Port">
+            <property name="input"/>
+            <property name="multiport"/>
+        </port>
+    </entity>
+    <entity name="FileWriter" class="com.isencia.passerelle.actor.io.FileWriter">
+        <property name="Receiver Q Capacity (-1)" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <property name="Receiver Q warning size (-1)" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <property name="_icon" class="com.isencia.passerelle.actor.gui.EditorIcon">
+        </property>
+        <property name="PassThrough" class="ptolemy.data.expr.Parameter" value="false">
+            <property name="style" class="ptolemy.actor.gui.style.CheckBoxStyle">
+            </property>
+        </property>
+        <property name="Path" class="ptolemy.data.expr.FileParameter" value="">
+        </property>
+        <property name="Encoding" class="ptolemy.data.expr.StringParameter" value="">
+        </property>
+        <property name="Append" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{503.0, 323.0}">
+        </property>
+        <port name="requestFinish" class="com.isencia.passerelle.core.ControlPort">
+            <property name="input"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="error" class="com.isencia.passerelle.core.ErrorPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="error" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="hasFired" class="com.isencia.passerelle.core.ControlPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="hasFinished" class="com.isencia.passerelle.core.ControlPort">
+            <property name="output"/>
+            <property name="multiport"/>
+            <property name="control" class="ptolemy.kernel.util.StringAttribute">
+            </property>
+        </port>
+        <port name="input" class="com.isencia.passerelle.core.Port">
+            <property name="input"/>
+            <property name="multiport"/>
+        </port>
+    </entity>
+    <relation name="_R" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <relation name="Vertex1282557291017" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+        <vertex name="Vertex" value="{0.0, 0.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{279.0, 338.0}">
+            </property>
+        </vertex>
+    </relation>
+    <link port="FileReader.error" relation="_R"/>
+    <link port="FileReader.hasFired" relation="Vertex1282557291017"/>
+    <link port="Console.requestFinish" relation="_R"/>
+    <link port="FileWriter.requestFinish" relation="Vertex1282557291017"/>
+</entity>

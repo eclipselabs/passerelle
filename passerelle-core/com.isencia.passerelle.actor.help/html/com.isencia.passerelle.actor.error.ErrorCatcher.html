@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>ErrorCatcher</title>
+</head>
+
+<body>
+<BODY LANG="en-US" DIR="LTR">
+<H2>ErrorCatcher</H2>
+<H4>com.isencia.passerelle.actor.error.ErrorCatcher</H4>
+<ul>
+</ul>
+<p>
+An actor that extracts the ManagedMessage from ErrorMessages received
+ on its input port, and sends it out. 
+ The error can optionally be logged.
+ 
+ This is useful to link to an error-output of one or more actors,
+ to implement an "ignore error" behaviour, combined with continued
+ sequence operations "as-if-everything-was-OK".
+ 
+ In this respect it differs from the plain DevNullActor, which
+ discards the received msg and thus effectively interrupts the sequence.
+ 
+ If the received message is not an ErrorMessage, or it does not
+ contain a ManagedMessage as the error's context, it is just forwarded
+ to the output as is.
+</p>
+<br/><br/>
+<H2>ErrorCatcher Attributes</H2>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Attribute</B></P>
+		</TD>
+		<TD WIDTH="69%" BGCOLOR="#c0c0c0">
+			<P ALIGN="CENTER"><B>Usage</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN="TOP">
+		<TD WIDTH="31%">
+			<P>logReceivedMessages</P>
+		</TD>
+		<TD WIDTH="69%">
+			<P>no documentation found</P>
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

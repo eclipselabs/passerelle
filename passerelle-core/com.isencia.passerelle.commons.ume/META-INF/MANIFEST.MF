@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Passerelle Unified Messaging Plug-in
+Bundle-SymbolicName: com.isencia.passerelle.commons.ume
+Bundle-Version: 8.10.0.qualifier
+Bundle-Vendor: iSencia
+Import-Package: com.isencia.util;version="8.7.0",
+ javax.activation,
+ javax.mail,
+ org.slf4j;version="1.5.0",
+ sun.io;resolution:=optional
+Require-Bundle: org.apache.commons.net;bundle-version="1.4.1"
+Export-Package: com.isencia.message;version="8.7.0",
+ com.isencia.message.db;version="8.7.0",
+ com.isencia.message.extractor;version="8.7.0",
+ com.isencia.message.ftp;version="8.7.0",
+ com.isencia.message.generator;version="8.7.0",
+ com.isencia.message.interceptor;version="8.7.0",
+ com.isencia.message.io;version="8.7.0",
+ com.isencia.message.mail;version="8.7.0",
+ com.isencia.message.net;version="8.7.0",
+ com.isencia.message.net.requestreply;version="8.7.0",
+ com.isencia.message.requestreply;version="8.7.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
