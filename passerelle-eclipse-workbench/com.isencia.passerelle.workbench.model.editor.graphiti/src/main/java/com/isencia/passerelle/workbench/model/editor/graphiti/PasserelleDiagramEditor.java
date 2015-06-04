@@ -36,7 +36,7 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.Page;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 import com.isencia.passerelle.editor.common.model.PaletteItemDefinition;
-import com.isencia.passerelle.workbench.model.editor.graphiti.feature.ModelElementCreateFeatureFromPaletteItemDefinition;
+import com.isencia.passerelle.workbench.model.editor.graphiti.feature.ModelElementCreateFeature;
 import com.isencia.passerelle.workbench.model.editor.graphiti.input.PasserelleEditorInputFactory;
 import com.isencia.passerelle.workbench.model.editor.graphiti.model.PasserelleIndependenceSolver;
 import com.isencia.passerelle.workbench.model.editor.graphiti.outline.DiagramEditorOutlinePage;
@@ -157,7 +157,7 @@ public class PasserelleDiagramEditor extends DiagramEditor {
     }
 
     public Object getNewObject() {
-      return new ModelElementCreateFeatureFromPaletteItemDefinition(selected, getDiagramTypeProvider().getFeatureProvider());
+      return new ModelElementCreateFeature(selected, getDiagramTypeProvider().getFeatureProvider());
     }
   }
 
