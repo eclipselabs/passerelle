@@ -246,7 +246,7 @@ public class BatchRequestSequenceSource extends Actor {
         String processType = ((StringToken) processTypeParameter.getToken()).stringValue();
         String initiator = ((StringToken) initiatorParameter.getToken()).stringValue();
 
-        req = entityFactory.createRequest(parentRequest.getCase(), initiator, parentRequest.getCategory(), processType, parentRequest.getCorrelationId());
+        req = entityFactory.createRequest(parentRequest.getCase(), initiator, parentRequest.getDataTypes(), processType, parentRequest.getCorrelationId());
         for (Entry<String, String> reqAttr : requestAttributes.entrySet()) {
           entityFactory.createAttribute(req, reqAttr.getKey(), reqAttr.getValue());
         }
