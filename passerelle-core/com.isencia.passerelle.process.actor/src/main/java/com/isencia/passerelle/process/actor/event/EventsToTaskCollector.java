@@ -15,6 +15,7 @@
 package com.isencia.passerelle.process.actor.event;
 
 import java.io.Serializable;
+import java.net.URI;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -29,31 +30,27 @@ import ptolemy.data.expr.StringParameter;
 import ptolemy.kernel.CompositeEntity;
 import ptolemy.kernel.util.IllegalActionException;
 import ptolemy.kernel.util.NameDuplicationException;
-import ptolemy.kernel.util.NamedObj;
 
 import com.isencia.passerelle.actor.FlowUtils;
-import com.isencia.passerelle.actor.InitializationException;
 import com.isencia.passerelle.actor.ProcessingException;
-import com.isencia.passerelle.actor.TerminationException;
-import com.isencia.passerelle.actor.v5.Actor;
-import com.isencia.passerelle.actor.v5.ActorContext;
-import com.isencia.passerelle.actor.v5.ProcessRequest;
-import com.isencia.passerelle.actor.v5.ProcessResponse;
 import com.isencia.passerelle.core.Port;
 import com.isencia.passerelle.core.PortFactory;
-import com.isencia.passerelle.core.PortMode;
 import com.isencia.passerelle.message.ManagedMessage;
 import com.isencia.passerelle.message.MessageException;
 import com.isencia.passerelle.message.MessageInputContext;
+import com.isencia.passerelle.process.actor.Actor;
+import com.isencia.passerelle.process.actor.ProcessRequest;
+import com.isencia.passerelle.process.actor.ProcessResponse;
 import com.isencia.passerelle.process.common.exception.ErrorCode;
+import com.isencia.passerelle.process.model.Attribute;
 import com.isencia.passerelle.process.model.AttributeNames;
-import com.isencia.passerelle.process.model.Request;
+import com.isencia.passerelle.process.model.Context;
 import com.isencia.passerelle.process.model.ResultBlock;
 import com.isencia.passerelle.process.model.Task;
 import com.isencia.passerelle.process.model.event.AbstractResultItemEventImpl;
 import com.isencia.passerelle.process.model.factory.ProcessFactory;
+import com.isencia.passerelle.process.model.persist.ProcessPersister;
 import com.isencia.passerelle.process.service.ProcessManager;
-import com.isencia.passerelle.process.service.ProcessManagerServiceTracker;
 import com.isencia.passerelle.runtime.Event;
 import com.isencia.passerelle.util.ExecutionTracerService;
 
@@ -86,13 +83,11 @@ public class EventsToTaskCollector extends Actor {
 
   // by default the actor name is set as task/result type
   public StringParameter taskTypeParam; // NOSONAR
-  public StringParameter resultTypeParam;
-
-  private ProcessManager processManager = null;
+  public StringParameter resultTypeParam; // NOSONAR
 
   public EventsToTaskCollector(CompositeEntity container, String name) throws IllegalActionException, NameDuplicationException {
     super(container, name);
-    input = PortFactory.getInstance().createInputPort(this, PortMode.PUSH, null);
+    input = PortFactory.getInstance().createInputPort(this, null);
     output = PortFactory.getInstance().createOutputPort(this);
     taskTypeParam = new StringParameter(this, AttributeNames.TASK_TYPE);
     taskTypeParam.setExpression(name);
@@ -104,27 +99,9 @@ public class EventsToTaskCollector extends Actor {
   protected Logger getLogger() {
     return LOGGER;
   }
-
+  
   @Override
-  protected void doInitialize() throws InitializationException {
-    super.doInitialize();
-    NamedObj flow = toplevel();
-    try {
-      processManager = null;
-      StringParameter procMgrParameter = (StringParameter) flow.getAttribute(com.isencia.passerelle.process.actor.ProcessRequest.HEADER_PROCESS_ID, StringParameter.class);
-      if (procMgrParameter != null) {
-        processManager = ProcessManagerServiceTracker.getService().getProcessManager(procMgrParameter.stringValue());
-      }
-    } catch (Exception e) {
-      throw new InitializationException(ErrorCode.ACTOR_INITIALISATION_ERROR, "Error obtaining ProcessManager", this, e);
-    }
-    if (processManager == null) {
-      throw new InitializationException(ErrorCode.ACTOR_INITIALISATION_ERROR, "Error obtaining ProcessManager", this, null);
-    }
-  }
-
-  @Override
-  protected void process(ActorContext ctxt, ProcessRequest request, ProcessResponse response) throws ProcessingException {
+  public void process(ProcessManager processManager, ProcessRequest request, ProcessResponse response) throws ProcessingException {
     Iterator<MessageInputContext> inputContexts = request.getAllInputContexts();
     Set<Event> events = new HashSet<Event>();
     while (inputContexts.hasNext()) {
@@ -146,50 +123,70 @@ public class EventsToTaskCollector extends Actor {
       }
     }
 
-    Task task = null;
-    try {
-      // time to create a task etc with the events as results
-      String requestId = Long.toString(processManager.getRequest().getId());
-      String referenceId = Long.toString(processManager.getRequest().getCase().getId());
+    ManagedMessage message = request.getMessage(input);
+    if (message != null) {
+      Task task = null;
+      try {
+        // time to create a task etc with the events as results
+        String requestId = Long.toString(processManager.getRequest().getId());
+        String referenceId = Long.toString(processManager.getRequest().getCase().getId());
 
-      Map<String, String> taskAttributes = new HashMap<String, String>();
-      taskAttributes.put(AttributeNames.CREATOR_ATTRIBUTE, getFullName());
-      taskAttributes.put(AttributeNames.REF_ID, referenceId);
-      taskAttributes.put(AttributeNames.REQUEST_ID, requestId);
-      task = createTask(processManager, processManager.getRequest(), taskAttributes, new HashMap<String, Serializable>());
-      if (!events.isEmpty()) {
-        ProcessFactory entityFactory = processManager.getFactory();
-        ResultBlock rb = entityFactory.createResultBlock(task, resultTypeParam.stringValue());
-        for (Event event : events) {
-          String value = null;
-          if (event instanceof AbstractResultItemEventImpl<?>) {
-            value = ((AbstractResultItemEventImpl<?>) event).getValueAsString();
+        Map<String, String> taskAttributes = new HashMap<String, String>();
+        taskAttributes.put(AttributeNames.CREATOR_ATTRIBUTE, getFullName());
+        taskAttributes.put(AttributeNames.REF_ID, referenceId);
+        taskAttributes.put(AttributeNames.REQUEST_ID, requestId);
+
+        String scopeGroup = message.getSingleHeader(ProcessRequest.HEADER_CTXT_SCOPE_GRP);
+        String scope = message.getSingleHeader(ProcessRequest.HEADER_CTXT_SCOPE);
+        Context processContext = processManager.getScopedProcessContext(scopeGroup, scope);
+        task = createTask(processManager, processContext, taskAttributes, new HashMap<String, Serializable>());
+        if (!events.isEmpty()) {
+          ProcessFactory entityFactory = processManager.getFactory();
+          ResultBlock rb = entityFactory.createResultBlock(task, resultTypeParam.stringValue());
+          for (Event event : events) {
+            if (event instanceof AbstractResultItemEventImpl<?>) {
+              AbstractResultItemEventImpl<?> resultItemEvent = (AbstractResultItemEventImpl<?>) event;
+              String value = resultItemEvent.getValueAsString();
+              entityFactory.createResultItem(rb, event.getTopic(), value, null, event.getCreationTS());
+              
+              Set<Attribute> attributes = resultItemEvent.getAttributes();
+              for (Attribute attribute : attributes) {
+                entityFactory.createResultItem(rb, attribute.getName(), attribute.getValueAsString(), null, event.getCreationTS());
+              }
+            } else {
+              entityFactory.createResultItem(rb, event.getTopic(), null, null, event.getCreationTS());
+            }
           }
-          entityFactory.createResultItem(rb, event.getTopic(), value, null, event.getCreationTS());
+          
+          ProcessPersister persister = processManager.getPersister();
+          boolean shouldClose = persister.open(true);
+          persister.persistResultBlocks(rb);
+          if (shouldClose) {
+            persister.close();
+          }
+        }
+        
+        processManager.notifyFinished(task);
+      } catch (Throwable t) {
+        ExecutionTracerService.trace(this, t.getMessage());
+        response.setException(new ProcessingException(ErrorCode.TASK_ERROR, "Error processing task", this, t));
+        if (task != null) {
+          processManager.notifyError(task, t);
         }
       }
-      processManager.notifyFinished(task);
-    } catch (Throwable t) {
-      ExecutionTracerService.trace(this, t.getMessage());
-      response.setException(new ProcessingException(ErrorCode.TASK_ERROR, "Error processing task", this, t));
-      if (task != null) {
-        processManager.notifyError(task, t);
+
+      try {
+        // send the process context with the additional task
+        ManagedMessage msg = createMessage(processManager, ManagedMessage.objectContentType);
+        response.addOutputMessage(output, msg);
+      } catch (MessageException e) {
+        response.setException(new ProcessingException(ErrorCode.MSG_CONSTRUCTION_ERROR, "Error sending output msg", this, e));
       }
+    } else {
+      // should not happen, but one never knows, e.g. when a requestFinish msg arrived or so...
+      getLogger().warn("Actor " + this.getFullName() + " received empty message in process()");
+      processFinished(processManager, request, response);
     }
-
-    try {
-      // send the process context with the additional task
-      ManagedMessage msg = createMessage(processManager, ManagedMessage.objectContentType);
-      response.addOutputMessage(output, msg);
-    } catch (MessageException e) {
-      response.setException(new ProcessingException(ErrorCode.MSG_CONSTRUCTION_ERROR, "Error sending output msg", this, e));
-    }
-  }
-
-  @Override
-  protected void doWrapUp() throws TerminationException {
-    processManager = null;
-    super.doWrapUp();
   }
 
   /**
@@ -202,10 +199,11 @@ public class EventsToTaskCollector extends Actor {
    * @return the new task
    * @throws Exception
    */
-  protected Task createTask(ProcessManager processManager, Request parentRequest, Map<String, String> taskAttributes,
+  protected Task createTask(ProcessManager processManager, Context processContext, Map<String, String> taskAttributes,
       Map<String, Serializable> taskContextEntries) throws Exception {
+    String initiator = new URI("actor", null, "/" + FlowUtils.getOriginalFullName(this).substring(1), null, null).toString();
     String taskType = taskTypeParam.stringValue();
-    Task task = processManager.getFactory().createTask(null, parentRequest, FlowUtils.getFullNameWithoutFlow(this), taskType);
+    Task task = processManager.getFactory().createTask(null, processContext, initiator, taskType);
     for (Entry<String, String> attr : taskAttributes.entrySet()) {
       processManager.getFactory().createAttribute(task, attr.getKey(), attr.getValue());
     }
@@ -213,7 +211,12 @@ public class EventsToTaskCollector extends Actor {
       Serializable value = taskContextEntries.get(key);
       task.getProcessingContext().putEntry(key, value);
     }
-    processManager.getPersister().persistTask(task);
+    ProcessPersister persister = processManager.getPersister();
+    boolean shouldClose = persister.open(true);
+    persister.persistTask(task);
+    if (shouldClose) {
+      persister.close();
+    }
     return task;
   }
 }

@@ -197,7 +197,7 @@ public class ServiceBasedActor extends TaskBasedActor {
    * @throws IllegalArgumentException
    *           when the timeUnitParameter contains an illegal value
    */
-  private TimeUnit getTimeOutUnit() throws IllegalActionException, IllegalArgumentException {
+  protected TimeUnit getTimeOutUnit() throws IllegalActionException, IllegalArgumentException {
     return TimeUnit.valueOf(timeUnitParameter.stringValue());
   }
 
@@ -205,7 +205,7 @@ public class ServiceBasedActor extends TaskBasedActor {
     return DEFAULT_TIMEOUT;
   }
 
-  private Long getTimeOutValue() throws IllegalActionException {
+  protected Long getTimeOutValue() throws IllegalActionException {
     Long timeoutValue = null;
     if (timeOutParameter.getToken() != null) {
       timeoutValue = ((LongToken) timeOutParameter.getToken()).longValue();

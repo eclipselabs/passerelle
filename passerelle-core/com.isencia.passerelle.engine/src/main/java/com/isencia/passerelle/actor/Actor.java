@@ -486,10 +486,10 @@ public abstract class Actor extends TypedAtomicActor implements IMessageCreator 
     Receiver rcver = super.newReceiver();
     if (rcver instanceof BlockingQueueReceiver) {
       BlockingQueueReceiver qRcvr = (BlockingQueueReceiver) rcver;
-      int qCapacity = ((IntToken) receiverQueueCapacityParam.getToken()).intValue();
+      int qCapacity = receiverQueueCapacityParam != null ? ((IntToken) receiverQueueCapacityParam.getToken()).intValue() : -1;
       qRcvr.setCapacity(qCapacity);
 
-      int qWarningSize = ((IntToken) receiverQueueWarningSizeParam.getToken()).intValue();
+      int qWarningSize = receiverQueueWarningSizeParam != null ? ((IntToken) receiverQueueWarningSizeParam.getToken()).intValue() : -1;
       qRcvr.setSizeWarningThreshold(qWarningSize);
     }
     return rcver;

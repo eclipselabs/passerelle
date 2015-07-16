@@ -86,7 +86,7 @@ public class SimpleEvent extends EventObject implements Event, Comparable<Event>
 		return duration;
 	}
 	
-	protected String setProperty(String propName, String propValue) {
+	public String setProperty(String propName, String propValue) {
 	  return eventProperties.put(propName, propValue);
 	}
 	
