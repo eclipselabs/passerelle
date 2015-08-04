@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.isencia.passerelle</groupId>
 		<artifactId>parent</artifactId>
-		<version>8.8.0-SNAPSHOT</version>
+		<version>8.10.0-SNAPSHOT</version>
 		<relativePath>../com.isencia.passerelle.parent</relativePath>
 	</parent>
 

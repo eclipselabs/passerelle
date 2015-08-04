@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.isencia.passerelle</groupId>
 		<artifactId>ptolemy</artifactId>
-		<version>8.8.0-SNAPSHOT</version>
+		<version>8.10.0-SNAPSHOT</version>
 	</parent>
 	
 	<groupId>com.isencia.passerelle</groupId>
