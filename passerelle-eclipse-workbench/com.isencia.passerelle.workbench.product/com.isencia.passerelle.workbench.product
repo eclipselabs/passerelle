@@ -14,8 +14,6 @@
    </configIni>
 
    <launcherArgs>
-      <programArgs>-consolelog -console -clean
-      </programArgs>
       <vmArgs>-Xms528M -Xmx1012M -XX:PermSize=128m -XX:MaxPermSize=384m
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
