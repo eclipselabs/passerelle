@@ -15,15 +15,9 @@
 package com.isencia.passerelle.flow;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 import junit.framework.TestCase;
 import ptolemy.actor.Director;
-import ptolemy.actor.ExecutionListener;
-import ptolemy.actor.Manager;
 import ptolemy.kernel.util.IllegalActionException;
 import ptolemy.kernel.util.NameDuplicationException;
 import com.isencia.passerelle.actor.v5.Actor;
@@ -39,7 +33,6 @@ import com.isencia.passerelle.testsupport.actor.Delay;
 import com.isencia.passerelle.testsupport.actor.ExceptionGenerator;
 import com.isencia.passerelle.testsupport.actor.MessageHistoryStack;
 import com.isencia.passerelle.testsupport.actor.TextSource;
-import com.isencia.util.FutureValue;
 
 /**
  * Some unit tests for Passerelle's ET domain
@@ -50,6 +43,7 @@ public class FlowExecutionsTest extends TestCase {
   private Flow flow;
   private FlowManager flowMgr;
 
+  @Override
   protected void setUp() throws Exception {
     flowMgr = new FlowManager();
   }
@@ -91,13 +85,16 @@ public class FlowExecutionsTest extends TestCase {
     flowMgr.executeBlockingLocally(flow, props);
 
     // now check if all went as expected
-    new FlowStatisticsAssertion().expectMsgSentCount(constant, 1L).expectMsgReceiptCount(tracerConsole, 1L).expectActorIterationCount(helloHello, 1L)
-        .assertFlow(flow);
+    new FlowStatisticsAssertion().
+    	expectMsgSentCount(constant, 1L).
+    	expectMsgReceiptCount(tracerConsole, 1L).
+    	expectActorIterationCount(helloHello, 1L).
+    	assertFlow(flow);
   }
 
   /**
-   * This test illustrates the "factory chain" advantage of the PN domain, where each actor has its own thread. This leads to all 3 "worker" actors (the delays)
-   * to be able to work (spend time) concurrently.
+   * This test illustrates the "factory chain" advantage of the PN domain, where each actor has its own thread. 
+	 * This leads to all 3 "worker" actors (the delays) to be able to work (spend time) concurrently.
    */
   public void testChainedDelays() throws Exception {
     flow = new Flow("testChainedDelays", null);
@@ -281,6 +278,7 @@ public class FlowExecutionsTest extends TestCase {
     props.put("excGenerator.RuntimeException", "true");
     
     FlowBuilder builder = new FlowBuilder() {
+      @Override
       public Flow buildFlow(String name) throws Exception {
         final Flow flow = new Flow(name, null);
         Director director = createProcessDirector(false, flow, "director");
@@ -309,6 +307,7 @@ public class FlowExecutionsTest extends TestCase {
     props.put("excGenerator.RuntimeException", "true");
     
     FlowBuilder builder = new FlowBuilder() {
+      @Override
       public Flow buildFlow(String name) throws Exception {
         final Flow flow = new Flow(name, null);
         Director director = createProcessDirector(false, flow, "director");

@@ -29,4 +29,4 @@ Export-Package: diva.canvas;version="7.0.1",
  diva.util.java2d.svg;version="7.0.1",
  diva.util.jester;version="7.0.1",
  diva.util.xml;version="7.0.1"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

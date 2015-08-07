@@ -56,7 +56,7 @@ public class FlowProcessingTest1 extends TestCase {
   @Override
   protected void setUp() throws Exception {
     if (processingService == null) {
-      processingService = new FlowProcessingServiceImpl(3);
+      processingService = new FlowProcessingServiceImpl();
     }
     if (repositoryService == null) {
       File repositoryRootFolder = new File(REPOS_ROOTFOLDER);

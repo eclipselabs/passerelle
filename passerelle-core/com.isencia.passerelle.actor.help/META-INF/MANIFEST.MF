@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Actor Help
 Bundle-SymbolicName: com.isencia.passerelle.actor.help;singleton:=true
-Bundle-Version: 8.10.0.qualifier
+Bundle-Version: 8.11.0.qualifier
 Bundle-Vendor: ISENCIA
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: org.eclipse.help

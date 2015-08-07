@@ -43,6 +43,7 @@ import com.isencia.passerelle.model.FlowManager;
 import com.isencia.passerelle.model.util.CollectingMomlParsingErrorHandler;
 import com.isencia.passerelle.model.util.CollectingMomlParsingErrorHandler.ErrorItem;
 import com.isencia.passerelle.model.util.MoMLParser;
+import com.isencia.passerelle.validation.version.VersionSpecification;
 
 public class EditorUtils {
 
@@ -124,7 +125,7 @@ public class EditorUtils {
     MoMLParser moMLParser = new MoMLParser();
     if (errorHandler != null)
       MoMLParser.setErrorHandler(errorHandler);
-    return moMLParser.parse(new String(bytes,CHARSET));
+    return moMLParser.parse(new String(bytes, CHARSET));
 
   }
 
@@ -326,13 +327,22 @@ public class EditorUtils {
     try {
       if (errorHandler != null)
         MoMLParser.setErrorHandler(errorHandler);
-      Flow flow = FlowManager.readMoml(reader);
+      Flow flow = readMoml(reader);
       if (errorHandler != null)
         MoMLParser.setErrorHandler(null);
       return flow;
     } catch (Exception e) {
       throw (new PasserelleException(ErrorCode.ERROR, "Error parsing model", e));
     }
+  }
+
+  public static Flow readMoml(Reader in, VersionSpecification versionSpec) throws Exception {
+    return FlowManager.readMoml(in, versionSpec);
+
+  }
+
+  public static Flow readMoml(Reader in) throws Exception {
+    return FlowManager.readMoml(in);
   }
 
   public static Flow initFlow(byte[] input) throws PasserelleException {

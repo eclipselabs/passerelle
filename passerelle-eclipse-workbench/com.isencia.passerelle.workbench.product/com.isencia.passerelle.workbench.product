@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="PasserelleWorkbench" uid="com.isencia.passerelle.workbench.product" id="com.isencia.passerelle.workbench.product" application="com.isencia.passerelle.workbench.application" version="8.10.0.qualifier" useFeatures="false" includeLaunchers="true">
+<product name="PasserelleWorkbench" uid="com.isencia.passerelle.workbench.product" id="com.isencia.passerelle.workbench.product" application="com.isencia.passerelle.workbench.application" version="8.11.0.qualifier" useFeatures="false" includeLaunchers="true">
 
    <aboutInfo>
       <image path="icons/about.gif"/>
@@ -14,7 +14,12 @@
    </configIni>
 
    <launcherArgs>
-      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+      <programArgs>-consolelog -console -clean
+      </programArgs>
+      <vmArgs>-Xms528M -Xmx1012M -XX:PermSize=128m -XX:MaxPermSize=384m
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
    </launcherArgs>
 
    <windowImages i16="/com.isencia.passerelle.workbench/icons/ide.gif" i32="/com.isencia.passerelle.workbench/icons/ide32.gif" i48="/com.isencia.passerelle.workbench/icons/ide48.gif"/>
@@ -40,7 +45,7 @@
    <license>
         <url>http://www.apache.org/licenses/LICENSE-2.0</url>
         <text>
-   /* Copyright 2014 - iSencia Belgium NV
+   /* Copyright 2015 - iSencia Belgium NV
 
    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
    you may not use this file except in compliance with the License.
@@ -277,7 +282,7 @@
       <plugin id="org.eclipse.team.core"/>
       <plugin id="org.eclipse.team.ui"/>
       <plugin id="org.eclipse.text"/>
-      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui" version="3.8.2.v20121018-234953"/>
       <plugin id="org.eclipse.ui.cheatsheets"/>
       <plugin id="org.eclipse.ui.console"/>
       <plugin id="org.eclipse.ui.editors"/>
@@ -291,7 +296,7 @@
       <plugin id="org.eclipse.ui.views.log"/>
       <plugin id="org.eclipse.ui.views.properties.tabbed"/>
       <plugin id="org.eclipse.ui.win32" fragment="true"/>
-      <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.eclipse.ui.workbench" version="3.8.2.v20121128-133708"/>
       <plugin id="org.eclipse.ui.workbench.texteditor"/>
       <plugin id="org.eclipse.update.configurator"/>
       <plugin id="org.eclipse.wst.common.core"/>
@@ -305,6 +310,8 @@
       <plugin id="org.eclipse.wst.validation"/>
       <plugin id="org.eclipse.wst.xml.core"/>
       <plugin id="org.eclipse.wst.xml.ui"/>
+      <plugin id="org.hamcrest"/>
+      <plugin id="org.hamcrest.core"/>
       <plugin id="org.jdom"/>
       <plugin id="org.junit"/>
       <plugin id="org.quartz"/>
@@ -318,18 +325,18 @@
    </plugins>
 
    <features>
-      <feature id="com.isencia.passerelle.core.feature" version="8.8.0"/>
-      <feature id="com.isencia.passerelle.workbench.feature" version="8.8.0"/>
+      <feature id="com.isencia.passerelle.core.feature" version="8.11.0"/>
+      <feature id="com.isencia.passerelle.workbench.feature" version="8.11.0"/>
       <feature id="ptolemy.feature" version="7.0.1"/>
    </features>
 
    <configurations>
-      <plugin id="com.isencia.passerelle.workbench" autoStart="false" startLevel="5" />
-      <plugin id="com.isencia.passerelle.workbench.starter" autoStart="true" startLevel="6" />
+      <plugin id="com.isencia.passerelle.workbench.starter" autoStart="true" startLevel="5" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="3" />
    </configurations>
 
 </product>

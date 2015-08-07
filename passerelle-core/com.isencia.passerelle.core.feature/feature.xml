@@ -2,15 +2,15 @@
 <feature
       id="com.isencia.passerelle.core.feature"
       label="Passerelle core Feature"
-      version="8.10.0.qualifier"
+      version="8.11.0.qualifier"
       provider-name="ISENCIA">
 
-   <description url="http://code.google.com/a/eclipselabs.org/p/passerelle/">
+   <description>
       The core Passerelle bundles, excluding 3rd-party dependencies.
    </description>
 
    <copyright>
-      /* Copyright 2011 - iSencia Belgium NV
+      /* Copyright 2015 - iSencia Belgium NV
 
    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
    you may not use this file except in compliance with the License.

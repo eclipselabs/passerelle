@@ -2,15 +2,16 @@
 <feature
       id="com.isencia.passerelle.workbench.graphiti.feature"
       label="Passerelle Graphiti-based editor Feature"
-      version="8.10.0.qualifier"
+      version="8.11.0.qualifier"
       provider-name="ISENCIA">
 
-   <description url="http://code.google.com/a/eclipselabs.org/p/passerelle/">
-      The Passerelle graphiti-based editor, including its specific dependencies (Graphiti, EMF, ...)
+   <description>
+      The Passerelle graphiti-based editor, including its specific
+dependencies (Graphiti, EMF, ...)
    </description>
 
    <copyright url="http://www.example.com/copyright">
-      /* Copyright 2013 - iSencia Belgium NV
+      /* Copyright 2015 - iSencia Belgium NV
 Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -423,9 +424,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    </license>
 
    <requires>
-      <import plugin="com.isencia.passerelle.engine" version="8.4.0" match="greaterOrEqual"/>
+      <import plugin="com.isencia.passerelle.engine" version="8.11.0" match="greaterOrEqual"/>
       <import plugin="ptolemy.core" version="7.0.1" match="greaterOrEqual"/>
-      <import plugin="com.isencia.passerelle.actor" version="8.4.0" match="greaterOrEqual"/>
+      <import plugin="com.isencia.passerelle.actor" version="8.11.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui" version="3.8.2" match="greaterOrEqual"/>
       <import plugin="com.isencia.passerelle.editor.common"/>
       <import plugin="com.isencia.passerelle.workbench.model.editor.ui"/>

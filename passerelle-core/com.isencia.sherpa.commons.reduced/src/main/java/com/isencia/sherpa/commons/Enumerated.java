@@ -237,7 +237,7 @@ public abstract class Enumerated<T extends Enumerated> implements Comparable<T>,
     if (!getEnumType().isInstance(object))
       throw new ClassCastException();
 
-    return (ordinal - object.ordinal);
+    return (ordinal - ((Enumerated)object).ordinal);
   }
 
   /**

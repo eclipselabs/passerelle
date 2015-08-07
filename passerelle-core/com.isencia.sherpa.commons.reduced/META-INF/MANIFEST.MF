@@ -4,5 +4,5 @@ Bundle-Name: Sherpabeans Commons
 Bundle-SymbolicName: com.isencia.sherpa.commons.reduced
 Bundle-Version: 6.2.5
 Bundle-Vendor: ISENCIA
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: com.isencia.sherpa.commons;version="6.2.5"

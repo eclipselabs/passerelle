@@ -27,14 +27,17 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import com.isencia.passerelle.runtime.Event;
 import com.isencia.passerelle.runtime.EventListener;
 import com.isencia.passerelle.runtime.FlowHandle;
 import com.isencia.passerelle.runtime.ProcessHandle;
 import com.isencia.passerelle.runtime.process.FlowNotExecutingException;
 import com.isencia.passerelle.runtime.process.FlowProcessingService;
+import com.isencia.passerelle.runtime.process.FlowProcessingServiceTracker;
 import com.isencia.passerelle.runtime.process.impl.executor.FlowExecutionFuture;
 import com.isencia.passerelle.runtime.process.impl.executor.FlowExecutionTask;
 import com.isencia.passerelle.runtime.process.impl.executor.FlowExecutor;
@@ -43,6 +46,10 @@ public class FlowProcessingServiceImpl implements FlowProcessingService {
 
   private final static Logger LOGGER = LoggerFactory.getLogger(FlowProcessingServiceImpl.class);
 
+  public void init() {
+    FlowProcessingServiceTracker.setService(this);
+  }
+  
   // the thread pool to launch flow execution tasks
   private ExecutorService flowExecutor;
 
@@ -63,7 +70,10 @@ public class FlowProcessingServiceImpl implements FlowProcessingService {
    * 
    * @param maxConcurrentProcesses
    */
-  public FlowProcessingServiceImpl(int maxConcurrentProcesses) {
+  public FlowProcessingServiceImpl() {
+    
+    // the available processors is much too small, set to a bigger value to make edm runnable
+    int maxConcurrentProcesses = Runtime.getRuntime().availableProcessors() * 100;
     LOGGER.info("Creating FlowProcessingService for {} max concurrent processes", maxConcurrentProcesses);
     flowExecutor = new FlowExecutor(maxConcurrentProcesses, maxConcurrentProcesses, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
   }

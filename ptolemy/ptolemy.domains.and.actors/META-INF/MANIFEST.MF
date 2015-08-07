@@ -28,4 +28,4 @@ Export-Package: ptolemy.actor.lib.comm;version="7.0.1",
  ptolemy.domains.sdf.kernel;version="7.0.1",
  ptolemy.domains.sdf.lib;version="7.0.1"
 Require-Bundle: ptolemy.core;bundle-version="7.0.1"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

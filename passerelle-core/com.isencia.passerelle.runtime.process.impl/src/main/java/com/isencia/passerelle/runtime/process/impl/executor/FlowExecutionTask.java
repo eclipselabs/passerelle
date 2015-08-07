@@ -23,8 +23,10 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.RunnableFuture;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import ptolemy.actor.CompositeActor;
 import ptolemy.actor.ExecutionListener;
 import ptolemy.actor.Manager.State;
@@ -34,6 +36,7 @@ import ptolemy.kernel.Entity;
 import ptolemy.kernel.Port;
 import ptolemy.kernel.util.IllegalActionException;
 import ptolemy.kernel.util.Workspace;
+
 import com.isencia.passerelle.core.ErrorCode;
 import com.isencia.passerelle.core.Manager;
 import com.isencia.passerelle.core.PasserelleException;
@@ -44,6 +47,8 @@ import com.isencia.passerelle.runtime.process.FlowProcessingService.StartMode;
 import com.isencia.passerelle.runtime.process.ProcessStatus;
 import com.isencia.passerelle.runtime.process.impl.debug.ActorBreakpointListener;
 import com.isencia.passerelle.runtime.process.impl.debug.PortBreakpointListener;
+import com.isencia.passerelle.runtime.process.impl.event.StatusProcessEvent;
+import com.isencia.passerelle.runtime.process.impl.event.TerminateEvent;
 
 /**
  * @author erwin
@@ -65,6 +70,7 @@ public class FlowExecutionTask implements CancellableTask<ProcessStatus>, Execut
   private volatile boolean suspended;
   private volatile Set<String> suspendedElements = new ConcurrentSkipListSet<String>();
   private Manager manager;
+  private EventListener listener;
 
   public FlowExecutionTask(StartMode mode, FlowHandle flowHandle, String processContextId, Map<String, String> parameterOverrides, EventListener listener,
       String... breakpointNames) {
@@ -76,6 +82,7 @@ public class FlowExecutionTask implements CancellableTask<ProcessStatus>, Execut
     status = ProcessStatus.IDLE;
     this.parameterOverrides = (parameterOverrides != null) ? new HashMap<String, String>(parameterOverrides) : null;
     this.breakpointNames = (breakpointNames != null) ? new HashSet<String>(Arrays.asList(breakpointNames)) : null;
+    this.listener = listener;
   }
 
   public RunnableFuture<ProcessStatus> newFutureTask() {
@@ -159,11 +166,14 @@ public class FlowExecutionTask implements CancellableTask<ProcessStatus>, Execut
         // TODO check if it's not better to override the finish method in our Manager
         // to set the state in there, same as for pause/resume...
         status = ProcessStatus.STOPPING;
-        manager.finish();
+        manager.stop();
       } else {
         LOGGER.info("Context {} - Canceling execution of flow {} before it started", processContextId, flowHandle.getCode());
         status = ProcessStatus.INTERRUPTED;
         manager = null;
+      }
+      if (listener != null) {
+        listener.handle(new StatusProcessEvent(processContextId, status, null));
       }
     } else {
       LOGGER.trace("Context {} - Ignoring canceling execution of flow {} that is already done", processContextId, flowHandle.getCode());
@@ -226,12 +236,15 @@ public class FlowExecutionTask implements CancellableTask<ProcessStatus>, Execut
   public void executionError(ptolemy.actor.Manager manager, Throwable throwable) {
     LOGGER.warn("Context " + processContextId + " - Execution error of flow " + getFlowHandle().getCode(), throwable);
     status = ProcessStatus.ERROR;
+    if (listener != null) {
+      listener.handle(new StatusProcessEvent(processContextId, status, throwable));
+    }
     busy = false;
   }
 
   /**
-   * Updates the flow execution status to <code>ProcessStatus.FINISHED</code>, or <code>ProcessStatus.INTERRUPTED</code> if the execution finished due to a
-   * cancel.
+   * Updates the flow execution status to <code>ProcessStatus.FINISHED</code>, or <code>ProcessStatus.INTERRUPTED</code>
+   * if the execution finished due to a cancel.
    */
   @Override
   public void executionFinished(ptolemy.actor.Manager manager) {
@@ -242,6 +255,9 @@ public class FlowExecutionTask implements CancellableTask<ProcessStatus>, Execut
       } else {
         LOGGER.warn("Context {} - Execution interrupted of flow {}", processContextId, getFlowHandle().getCode());
         status = ProcessStatus.INTERRUPTED;
+      }
+      if (listener != null) {
+        listener.handle(new StatusProcessEvent(processContextId, status, null));
       }
       busy = false;
     }

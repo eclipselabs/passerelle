@@ -2,22 +2,22 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Passerelle actors and tools for Diagnosis solutions
 Bundle-SymbolicName: com.isencia.passerelle.process.actor
-Bundle-Version: 8.10.0.qualifier
+Bundle-Version: 8.11.0.qualifier
 Bundle-Vendor: ISENCIA
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Eclipse-RegisterBuddy: com.isencia.passerelle.engine, ptolemy.core
 Import-Package: 
- com.isencia.passerelle.actor.dynaport;version="8.7.0",
- com.isencia.passerelle.process.common.exception;version="8.8.0",
- com.isencia.passerelle.process.common.util;version="8.8.0",
- com.isencia.passerelle.process.model;version="8.8.0",
- com.isencia.passerelle.process.model.event;version="8.8.0",
- com.isencia.passerelle.process.model.factory;version="8.8.0",
- com.isencia.passerelle.process.model.persist;version="8.8.0",
- com.isencia.passerelle.process.model.util;version="8.8.0",
- com.isencia.passerelle.process.service;version="8.8.0",
- com.isencia.passerelle.process.service.impl;version="8.8.0",
- com.isencia.passerelle.runtime;version="8.7.0",
+ com.isencia.passerelle.actor.dynaport;version="8.11.0",
+ com.isencia.passerelle.process.common.exception;version="8.11.0",
+ com.isencia.passerelle.process.common.util;version="8.11.0",
+ com.isencia.passerelle.process.model;version="8.11.0",
+ com.isencia.passerelle.process.model.event;version="8.11.0",
+ com.isencia.passerelle.process.model.factory;version="8.11.0",
+ com.isencia.passerelle.process.model.persist;version="8.11.0",
+ com.isencia.passerelle.process.model.util;version="8.11.0",
+ com.isencia.passerelle.process.service;version="8.11.0",
+ com.isencia.passerelle.process.service.impl;version="8.11.0",
+ com.isencia.passerelle.runtime;version="8.11.0",
  com.isencia.sherpa.commons,
  javax.mail,
  javax.mail.internet,
@@ -30,10 +30,10 @@ Import-Package:
 Require-Bundle: ptolemy.core;bundle-version="7.0.1",
  ptolemy.domains.and.actors;bundle-version="7.0.1",
  ptolemy.gui;bundle-version="7.0.1",
- com.isencia.passerelle.engine;bundle-version="8.7.0",
- com.isencia.passerelle.project.repository.api;bundle-version="8.7.0"
-Export-Package: com.isencia.passerelle.process.actor;version="8.9.0",
- com.isencia.passerelle.process.actor.flow;version="8.9.0"
+ com.isencia.passerelle.engine;bundle-version="8.11.0",
+ com.isencia.passerelle.project.repository.api;bundle-version="8.11.0"
+Export-Package: com.isencia.passerelle.process.actor;version="8.11.0",
+ com.isencia.passerelle.process.actor.flow;version="8.11.0"
 Bundle-Activator: com.isencia.passerelle.process.actor.activator.Activator
 
 
