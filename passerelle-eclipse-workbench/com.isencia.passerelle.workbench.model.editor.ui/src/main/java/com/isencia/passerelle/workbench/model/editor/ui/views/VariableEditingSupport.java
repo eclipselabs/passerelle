@@ -1,24 +1,14 @@
 package com.isencia.passerelle.workbench.model.editor.ui.views;
 
 import java.util.List;
+
 import org.eclipse.jface.viewers.CellEditor;
-import org.eclipse.jface.viewers.ColumnViewer;
 import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.views.properties.PropertyDescriptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ptolemy.actor.gui.ColorAttribute;
-import ptolemy.actor.gui.style.TextStyle;
-import ptolemy.data.BooleanToken;
-import ptolemy.data.expr.FileParameter;
-import ptolemy.data.expr.Parameter;
-import ptolemy.data.expr.Variable;
-import ptolemy.data.type.BaseType;
-import ptolemy.data.type.Type;
-import ptolemy.kernel.util.Attribute;
-import ptolemy.kernel.util.IllegalActionException;
-import ptolemy.kernel.util.StringAttribute;
+
 import com.isencia.passerelle.actor.Actor;
 import com.isencia.passerelle.util.ptolemy.RegularExpressionParameter;
 import com.isencia.passerelle.util.ptolemy.ResourceParameter;
@@ -40,6 +30,17 @@ import com.isencia.passerelle.workbench.model.editor.ui.descriptor.TextPropertyD
 import com.isencia.passerelle.workbench.model.editor.ui.properties.CellEditorAttribute;
 import com.isencia.passerelle.workbench.model.ui.GeneralAttribute;
 
+import ptolemy.actor.gui.ColorAttribute;
+import ptolemy.actor.gui.style.TextStyle;
+import ptolemy.data.BooleanToken;
+import ptolemy.data.expr.FileParameter;
+import ptolemy.data.expr.Parameter;
+import ptolemy.data.expr.Variable;
+import ptolemy.data.type.BaseType;
+import ptolemy.data.type.Type;
+import ptolemy.kernel.util.Attribute;
+import ptolemy.kernel.util.StringAttribute;
+
 /**
  * Editing support for parameter column.
  * 
@@ -47,7 +48,7 @@ import com.isencia.passerelle.workbench.model.ui.GeneralAttribute;
  */
 public class VariableEditingSupport extends EditingSupport {
 
-  private static Logger logger = LoggerFactory.getLogger(VariableEditingSupport.class);
+  private static Logger LOGGER = LoggerFactory.getLogger(VariableEditingSupport.class);
 
   private ActorAttributesTableViewer actorAttributesView;
 
@@ -122,22 +123,10 @@ public class VariableEditingSupport extends EditingSupport {
       // If we use this parameter, we can sent the file extensions to the
       // editor
     } else if (parameter instanceof FileParameter) {
-      FilePickerPropertyDescriptor des = new FilePickerPropertyDescriptor(parameter.getName(), parameter.getDisplayName());
-      final FileParameter fp = (FileParameter) parameter;
-      if (parameter instanceof com.isencia.passerelle.util.ptolemy.FileParameter) {
-        des.setFilter(((com.isencia.passerelle.util.ptolemy.FileParameter) fp).getFilterExtensions());
-      }
-      try {
-        if (fp.asFile() != null)
-          des.setCurrentPath(fp.asFile().getParent());
-      } catch (IllegalActionException e) {
-        logger.error("Cannot get file path!", e);
-      }
+      FilePickerPropertyDescriptor des = new FilePickerPropertyDescriptor((FileParameter)parameter);
       return des;
     } else if (parameter instanceof RegularExpressionParameter) {
       return new RegularExpressionDescriptor((RegularExpressionParameter) parameter);
-    } else if (parameter instanceof FileParameter) {
-      return new FilePickerPropertyDescriptor(parameter.getName(), parameter.getDisplayName());
     } else if (parameter instanceof StringMapParameter) {
       final StringMapPropertyDescriptor des = new StringMapPropertyDescriptor((StringMapParameter) parameter);
       return des;
@@ -165,7 +154,7 @@ public class VariableEditingSupport extends EditingSupport {
       return propertyDescriptor;
     }
   }
-
+  
   private boolean hasOptions(Attribute parameter) {
     if (parameter.getContainer() instanceof Actor) {
       initializeOptionsFactory((Actor) parameter.getContainer());
@@ -209,7 +198,7 @@ public class VariableEditingSupport extends EditingSupport {
         return ((BooleanToken) param.getToken()).booleanValue();
       }
     } catch (Exception ne) {
-      logger.error("Cannot set read token from " + param.getName(), ne);
+      LOGGER.error("Cannot set read token from " + param.getName(), ne);
     }
     return param.getExpression();
   }
@@ -233,7 +222,7 @@ public class VariableEditingSupport extends EditingSupport {
         actorAttributesView.setAttributeValue(element, value);
       }
     } catch (Exception ne) {
-      logger.error("Cannot set variable value " + value, ne);
+      LOGGER.error("Cannot set variable value " + value, ne);
     }
   }
 }
